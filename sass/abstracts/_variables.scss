@@ -1,0 +1,12 @@
+//#region Breakpoint
+/*
+  Responsável por gerar um objeto com todos os valores de breakpoint.
+*/
+$breakpoints: (
+	'2xl': 96rem,
+	'xl': 80rem,
+	'lg': 64rem,
+	'md': 48rem,
+	'sm': 40rem,
+);
+//#endregion

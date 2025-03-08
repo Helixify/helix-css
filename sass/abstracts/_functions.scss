@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use 'variables' as variable;
+
+//#region Get Breakpoint
+/*
+  Função responsável por mapear todo o array de objetos de breakpoint.
+*/
+@function get-breakpoint($key) {
+	@return map.get(variable.$breakpoints, $key);
+}
+//#endregion

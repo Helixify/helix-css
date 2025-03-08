@@ -11,10 +11,13 @@
 		"type": "git",
 		"url": "git+https://github.com/Helixify/HelixCSS.git"
 	},
-	"files": ["dist/compressed/main.css"],
+	"files": [
+		"dist/compressed/main.css"
+	],
 	"license": "MIT",
 	"scripts": {
 		"build": "node build.js",
+		"watch": "node build.js --watch",
 		"dev": "vite",
 		"format": "prettier --write .",
 		"preview": "vite preview"
@@ -25,5 +28,10 @@
 		"sass": "^1.79.4",
 		"vite": "^4.5.5"
 	},
-	"keywords": ["helix", "helixcss", "helix-css", "css-framework"]
+	"keywords": [
+		"helix",
+		"helixcss",
+		"helix-css",
+		"css-framework"
+	]
 }

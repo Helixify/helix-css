@@ -1,70 +1,45 @@
-import fs from "fs";
+import fs from "node:fs";
 import * as sass from "sass";
-import { fileURLToPath } from "url";
-import { dirname, join, basename } from "path";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const sassFiles = [
-	join(__dirname, "sass", "alignment.scss"),
-	join(__dirname, "sass", "border.scss"),
-	join(__dirname, "sass", "flexbox.scss"),
-	join(__dirname, "sass", "form.scss"),
-	join(__dirname, "sass", "gap.scss"),
-	join(__dirname, "sass", "grid.scss"),
-	join(__dirname, "sass", "helper.scss"),
-	join(__dirname, "sass", "layout.scss"),
-	join(__dirname, "sass", "main.scss"),
-	join(__dirname, "sass", "position.scss"),
-	join(__dirname, "sass", "reset.scss"),
-	join(__dirname, "sass", "spacing.scss"),
-	join(__dirname, "sass", "transition.scss"),
-	join(__dirname, "sass", "typography.scss"),
-];
+// Define os arquivos SASS que serão compilados
+const sassFiles = ["main.scss", "alignment.scss"];
 
 const outputDir = join(__dirname, "dist");
 
+// Função de log com emojis
 const log = async (type, message) => {
-	const timestamp = new Date().toLocaleTimeString("pt-BR", {
-		hour: "2-digit",
-		minute: "2-digit",
-		hour12: false,
-	});
-
-	const colors = {
-		info: "\x1b[34m",
-		error: "\x1b[31m",
-		success: "\x1b[32m",
-		log: "\x1b[33m",
-	};
-
-	const resetColor = "\x1b[0m";
-
-	let typeTag;
-	let color;
+	let typeText;
 
 	switch (type) {
 		case "info":
-			typeTag = "Info:";
-			color = colors.info;
+			typeText = "Info";
 			break;
 		case "error":
-			typeTag = "Error:";
-			color = colors.error;
+			typeText = "Error";
 			break;
 		case "success":
-			typeTag = "Success:";
-			color = colors.success;
+			typeText = "Success";
+			break;
+		case "compile":
+			typeText = "Compile";
+			break;
+		case "watch":
+			typeText = "Watch";
 			break;
 		default:
-			typeTag = "Log:";
-			color = colors.log;
+			typeText = "Log";
 	}
 
-	console.log(`${timestamp} ${color}${typeTag}${resetColor} ${message}`);
+	const formattedMessage = message.replace(/`([^`]+)`/g, "\x1b[36m$1\x1b[0m");
+	console.log(`${typeText}: ${formattedMessage}`);
 };
 
+// Garante que o diretório existe
 const ensureDirectoryExistence = async (filePath) => {
 	const dir = dirname(filePath);
 	try {
@@ -74,66 +49,109 @@ const ensureDirectoryExistence = async (filePath) => {
 	}
 };
 
-const compileSass = async (filePath, outputPath, options) => {
+// Compila um arquivo SASS
+const compileSass = async (fileName) => {
+	const filePath = join(__dirname, "sass", fileName);
+	const fileNameWithoutExt = fileName.replace(".scss", "");
+
+	// Define os caminhos de saída para versões expanded e compressed
+	const expandedOutputPath = join(
+		outputDir,
+		"expanded",
+		`${fileNameWithoutExt}.css`,
+	);
+	const minifiedOutputPath = join(
+		outputDir,
+		"compressed",
+		`${fileNameWithoutExt}.min.css`,
+	);
+
 	try {
-		const result = sass.compile(filePath, {
-			style: options.minify ? "compressed" : "expanded",
-			sourceMap: options.sourceMap,
+		// Compila versão expanded
+		const expandedResult = sass.compile(filePath, {
+			style: "expanded",
+			sourceMap: true,
 		});
 
-		await ensureDirectoryExistence(outputPath);
+		// Compila versão compressed
+		const compressedResult = sass.compile(filePath, {
+			style: "compressed",
+			sourceMap: false,
+		});
 
-		let cssData = result.css;
-		if (typeof cssData !== "string") {
-			cssData = JSON.stringify(cssData);
-		}
-		await fs.promises.writeFile(outputPath, cssData, "utf8");
+		// Salva versão expanded
+		await ensureDirectoryExistence(expandedOutputPath);
+		await fs.promises.writeFile(expandedOutputPath, expandedResult.css, "utf8");
 
-		if (options.sourceMap && result.sourceMap) {
-			let sourceMapData = result.sourceMap;
-			if (
-				typeof sourceMapData !== "string" &&
-				!Buffer.isBuffer(sourceMapData)
-			) {
-				sourceMapData = JSON.stringify(sourceMapData);
-			}
-			await fs.promises.writeFile(`${outputPath}.map`, sourceMapData, "utf8");
-		}
-
-		log("success", `Sass compiled to ${outputPath}`);
-	} catch (error) {
-		log("error", `Error compiling Sass: ${error}`);
-	}
-};
-
-const run = async () => {
-	try {
-		for (const filePath of sassFiles) {
-			const fileName = basename(filePath, ".scss");
-
-			const minifiedOutputPath = join(
-				outputDir,
-				"compressed",
-				`${fileName}.css`,
+		if (expandedResult.sourceMap) {
+			await fs.promises.writeFile(
+				`${expandedOutputPath}.map`,
+				JSON.stringify(expandedResult.sourceMap),
+				"utf8",
 			);
-			const expandedOutputPath = join(outputDir, "expanded", `${fileName}.css`);
-
-			await compileSass(filePath, minifiedOutputPath, {
-				minify: true,
-				sourceMap: false,
-			});
-			await compileSass(filePath, expandedOutputPath, {
-				minify: false,
-				sourceMap: true,
-			});
 		}
 
-		log("success", "Compilation process completed successfully.");
+		// Salva versão compressed
+		await ensureDirectoryExistence(minifiedOutputPath);
+		await fs.promises.writeFile(
+			minifiedOutputPath,
+			compressedResult.css,
+			"utf8",
+		);
+
+		log(
+			"compile",
+			`Compiled \`${fileName}\` to:
+      - \`${expandedOutputPath}\`
+      - \`${minifiedOutputPath}\``,
+		);
 	} catch (error) {
-		log("error", `Error in the compilation process: ${error}`);
+		log("error", `Error compiling \`${fileName}\`: ${error}`);
 	}
 };
 
-run().catch((error) => {
-	log("error", `Error in the overall process: ${error}`);
-});
+// Compila todos os arquivos SASS
+const compileAll = async () => {
+	try {
+		await Promise.all(sassFiles.map((file) => compileSass(file)));
+		log("success", "All SASS files compiled successfully");
+	} catch (error) {
+		log("error", `Error in compilation process: ${error}`);
+	}
+};
+
+// Observa mudanças nos arquivos
+const watchFiles = () => {
+	log("watch", "Watching for file changes...");
+
+	const sassDir = join(__dirname, "sass");
+
+	fs.watch(sassDir, { recursive: true }, async (_eventType, filename) => {
+		if (filename?.endsWith(".scss")) {
+			log("info", `File \`${filename}\` changed`);
+
+			// Se o arquivo alterado está na nossa lista, compila ele
+			if (sassFiles.includes(filename)) {
+				await compileSass(filename);
+			}
+			// Se for um arquivo parcial (_filename.scss), recompila tudo
+			else if (filename.startsWith("_")) {
+				log("info", "Partial file changed, recompiling all files...");
+				await compileAll();
+			}
+		}
+	});
+};
+
+// Execução principal
+if (process.argv.includes("--watch")) {
+	compileAll()
+		.then(watchFiles)
+		.catch((error) => {
+			log("error", `Error in watch process: ${error}`);
+		});
+} else {
+	compileAll().catch((error) => {
+		log("error", `Error in compilation process: ${error}`);
+	});
+}

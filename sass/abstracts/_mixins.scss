@@ -1,0 +1,59 @@
+@use 'functions' as function;
+
+//#region Media Up
+/*
+	Mixin responsável por criar o media-query mobile first
+*/
+@mixin media-up($breakpoint) {
+	@media (min-width: function.get-breakpoint($breakpoint)) {
+		@content;
+	}
+}
+//#endregion
+
+//#region Media Down
+/*
+  Mixin responsável por criar o media-query desktop first
+*/
+@mixin media-down($breakpoint) {
+	@media (max-width: function.get-breakpoint($breakpoint)) {
+		@content;
+	}
+}
+//#endregion
+
+//#region Responsive class
+/*
+	Mixin responsável por criar o prefixo para classes responsivas
+*/
+@mixin responsive-class($breakpoint, $class) {
+	@if $breakpoint == '2xl' {
+		.\32xl\:#{$class} {
+			@content;
+		}
+	} @else {
+		.#{$breakpoint}\:#{$class} {
+			@content;
+		}
+	}
+}
+//#endregion
+
+//#region Size variables
+/*
+	Mixin responsável por criar todas as variáveis de tamanho com base na tabela de tamanhos da documentação
+*/
+@mixin var-size {
+	@for $i from 0 through 16 {
+		@if $i == 0 {
+			--#{$i}: #{$i}rem;
+		} @else if $i >= 1 and $i <= 4 {
+			--#{$i}: #{calc(($i * 2) / 16)}rem;
+		} @else if $i > 4 and $i <= 14 {
+			--#{$i}: #{calc((($i * 4) - 8) / 16)}rem;
+		} @else if $i > 14 and $i <= 16 {
+			--#{$i}: #{calc((($i * 8) - 64) / 16)}rem;
+		}
+	}
+}
+//#endregion
