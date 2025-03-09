@@ -34,11 +34,11 @@
 }
 
 //#region Responsive
-/*
-  Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
-*/
+// Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
+
 @mixin responsive($breakpoint) {
 	@include abstract.responsive-class(
+		false,
 		$breakpoint,
 		'justify'
 	) {
@@ -46,7 +46,11 @@
 		@include justify-variants;
 	}
 
-	@include abstract.responsive-class($breakpoint, 'align') {
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'align'
+	) {
 		@include flex-alignment(align-items);
 		@include align-variants;
 	}

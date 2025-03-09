@@ -11,7 +11,6 @@ const sassFiles = ["main.scss", "alignment.scss"];
 
 const outputDir = join(__dirname, "dist");
 
-// Função de log com emojis
 const log = async (type, message) => {
 	let typeText;
 

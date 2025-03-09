@@ -1,11 +1,11 @@
-@use "mixins" as alignment;
+@use 'mixins' as alignment;
 
 .justify {
-  @include alignment.flex-alignment(justify-content);
-  @include alignment.justify-variants;
+	@include alignment.flex-alignment(justify-content);
+	@include alignment.justify-variants;
 }
 
 .align {
-  @include alignment.flex-alignment(align-items);
-  @include alignment.align-variants;
+	@include alignment.flex-alignment(align-items);
+	@include alignment.align-variants;
 }

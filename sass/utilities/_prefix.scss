@@ -1,1 +1,13 @@
 $prefix: 'hue';
+
+@mixin prefix($class) {
+	@if $prefix != '' {
+		.#{$prefix}-#{$class} {
+			@content;
+		}
+	} @else {
+		.#{$class} {
+			@content;
+		}
+	}
+}
