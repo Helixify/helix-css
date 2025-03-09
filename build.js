@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Define os arquivos SASS que serão compilados
-const sassFiles = ["main.scss", "alignment.scss"];
+const sassFiles = ["main.scss", "reset.scss", "alignment.scss"];
 
 const outputDir = join(__dirname, "dist");
 

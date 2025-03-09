@@ -1,6 +1,7 @@
 /*  
   Helix CSS
 */
-@use 'components/alignment/styles';
+@use 'components/reset/styles' as *;
+@use 'components/alignment/styles' as *;
 
 @use 'utilities';
