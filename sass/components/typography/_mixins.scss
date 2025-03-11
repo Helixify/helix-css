@@ -1,0 +1,29 @@
+@mixin heading {
+	@for $i from 1 through 6 {
+		&#{$i} {
+			font-size: var(--heading-#{$i});
+		}
+	}
+}
+
+@mixin font-size {
+	&-size-xs {
+		font-size: var(--font-size-xs);
+	}
+
+	&-size-sm {
+		font-size: var(--font-size-sm);
+	}
+
+	&-size-md {
+		font-size: var(--font-size-md);
+	}
+
+	&-size-lg {
+		font-size: var(--font-size-lg);
+	}
+
+	&-size-xl {
+		font-size: var(--font-size-xl);
+	}
+}

@@ -1,10 +1,35 @@
 //#region Breakpoint
 // Responsável por gerar um objeto com todos os valores de breakpoint.
+
 $breakpoints: (
 	'2xl': 96rem,
 	'xl': 80rem,
 	'lg': 64rem,
 	'md': 48rem,
 	'sm': 40rem,
+);
+//#endregion
+
+//#region Sizes
+// Responsável por gerar um objeto com todos os valores de tamanho.
+
+$sizes: (
+	'5xs': var(--0),
+	'4xs': var(--1),
+	'3xs': var(--2),
+	'2xs': var(--3),
+	'xs': var(--4),
+	'sm': var(--5),
+	'md': var(--6),
+	'lg': var(--7),
+	'xl': var(--8),
+	'2xl': var(--9),
+	'3xl': var(--10),
+	'4xl': var(--11),
+	'5xl': var(--12),
+	'6xl': var(--13),
+	'7xl': var(--14),
+	'8xl': var(--15),
+	'9xl': var(--16),
 );
 //#endregion

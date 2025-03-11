@@ -1,0 +1,8 @@
+@use '../abstracts/mixins' as mixins;
+@use '../components/typography/variables' as typography;
+
+:root {
+	@include mixins.var-size;
+
+	@include typography.variables;
+}
