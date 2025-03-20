@@ -20,69 +20,45 @@ small {
   font-size: var(--small-size);
 }
 
-.h-1,
-.heading-1 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--heading-line-height);
-  color: var(--heading-color);
-}
-.h-2,
-.heading-2 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--heading-line-height);
-  color: var(--heading-color);
-}
-.h-3,
-.heading-3 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--heading-line-height);
-  color: var(--heading-color);
-}
-.h-4,
-.heading-4 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--heading-line-height);
-  color: var(--heading-color);
-}
-.h-5,
-.heading-5 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--heading-line-height);
-  color: var(--heading-color);
-}
-.h-6,
+.h1,
+.heading-1,
+.h2,
+.heading-2,
+.h3,
+.heading-3,
+.h4,
+.heading-4,
+.h5,
+.heading-5,
+.h6,
 .heading-6 {
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-heading);
   line-height: var(--heading-line-height);
   color: var(--heading-color);
 }
-.h-1,
+
+.h1,
 .heading-1 {
   font-size: var(--heading-1);
 }
-.h-2,
+.h2,
 .heading-2 {
   font-size: var(--heading-2);
 }
-.h-3,
+.h3,
 .heading-3 {
   font-size: var(--heading-3);
 }
-.h-4,
+.h4,
 .heading-4 {
   font-size: var(--heading-4);
 }
-.h-5,
+.h5,
 .heading-5 {
   font-size: var(--heading-5);
 }
-.h-6,
+.h6,
 .heading-6 {
   font-size: var(--heading-6);
 }

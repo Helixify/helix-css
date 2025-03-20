@@ -20,7 +20,7 @@
 
 @mixin heading {
 	@for $i from 1 through 6 {
-		&-#{$i} {
+		&#{$i} {
 			font-size: var(--heading-#{$i});
 		}
 	}
@@ -47,3 +47,17 @@
 		font-size: var(--font-size-xl);
 	}
 }
+
+//#region Responsive
+// Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
+
+@mixin responsive($breakpoint) {
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'h, heading'
+	) {
+		@include heading;
+	}
+}
+//#endregion
