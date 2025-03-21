@@ -64,102 +64,267 @@ small {
 }
 
 @media (max-width: 96rem) {
-  .\32 xl\:h1, heading-1 {
+  .\32 xl\:h1 {
     font-size: var(--heading-1);
   }
-  .\32 xl\:h2, heading-2 {
+  .\32 xl\:h2 {
     font-size: var(--heading-2);
   }
-  .\32 xl\:h3, heading-3 {
+  .\32 xl\:h3 {
     font-size: var(--heading-3);
   }
-  .\32 xl\:h4, heading-4 {
+  .\32 xl\:h4 {
     font-size: var(--heading-4);
   }
-  .\32 xl\:h5, heading-5 {
+  .\32 xl\:h5 {
     font-size: var(--heading-5);
   }
-  .\32 xl\:h6, heading-6 {
+  .\32 xl\:h6 {
     font-size: var(--heading-6);
+  }
+  .\32 xl\:heading-1 {
+    font-size: var(--heading-1);
+  }
+  .\32 xl\:heading-2 {
+    font-size: var(--heading-2);
+  }
+  .\32 xl\:heading-3 {
+    font-size: var(--heading-3);
+  }
+  .\32 xl\:heading-4 {
+    font-size: var(--heading-4);
+  }
+  .\32 xl\:heading-5 {
+    font-size: var(--heading-5);
+  }
+  .\32 xl\:heading-6 {
+    font-size: var(--heading-6);
+  }
+  .\32 xl\:font-size-xs {
+    font-size: var(--font-size-xs);
+  }
+  .\32 xl\:font-size-sm {
+    font-size: var(--font-size-sm);
+  }
+  .\32 xl\:font-size-md {
+    font-size: var(--font-size-md);
+  }
+  .\32 xl\:font-size-lg {
+    font-size: var(--font-size-lg);
+  }
+  .\32 xl\:font-size-xl {
+    font-size: var(--font-size-xl);
   }
 }
 @media (max-width: 80rem) {
-  .xl\:h1, heading-1 {
+  .xl\:h1 {
     font-size: var(--heading-1);
   }
-  .xl\:h2, heading-2 {
+  .xl\:h2 {
     font-size: var(--heading-2);
   }
-  .xl\:h3, heading-3 {
+  .xl\:h3 {
     font-size: var(--heading-3);
   }
-  .xl\:h4, heading-4 {
+  .xl\:h4 {
     font-size: var(--heading-4);
   }
-  .xl\:h5, heading-5 {
+  .xl\:h5 {
     font-size: var(--heading-5);
   }
-  .xl\:h6, heading-6 {
+  .xl\:h6 {
     font-size: var(--heading-6);
+  }
+  .xl\:heading-1 {
+    font-size: var(--heading-1);
+  }
+  .xl\:heading-2 {
+    font-size: var(--heading-2);
+  }
+  .xl\:heading-3 {
+    font-size: var(--heading-3);
+  }
+  .xl\:heading-4 {
+    font-size: var(--heading-4);
+  }
+  .xl\:heading-5 {
+    font-size: var(--heading-5);
+  }
+  .xl\:heading-6 {
+    font-size: var(--heading-6);
+  }
+  .xl\:font-size-xs {
+    font-size: var(--font-size-xs);
+  }
+  .xl\:font-size-sm {
+    font-size: var(--font-size-sm);
+  }
+  .xl\:font-size-md {
+    font-size: var(--font-size-md);
+  }
+  .xl\:font-size-lg {
+    font-size: var(--font-size-lg);
+  }
+  .xl\:font-size-xl {
+    font-size: var(--font-size-xl);
   }
 }
 @media (max-width: 64rem) {
-  .lg\:h1, heading-1 {
+  .lg\:h1 {
     font-size: var(--heading-1);
   }
-  .lg\:h2, heading-2 {
+  .lg\:h2 {
     font-size: var(--heading-2);
   }
-  .lg\:h3, heading-3 {
+  .lg\:h3 {
     font-size: var(--heading-3);
   }
-  .lg\:h4, heading-4 {
+  .lg\:h4 {
     font-size: var(--heading-4);
   }
-  .lg\:h5, heading-5 {
+  .lg\:h5 {
     font-size: var(--heading-5);
   }
-  .lg\:h6, heading-6 {
+  .lg\:h6 {
     font-size: var(--heading-6);
+  }
+  .lg\:heading-1 {
+    font-size: var(--heading-1);
+  }
+  .lg\:heading-2 {
+    font-size: var(--heading-2);
+  }
+  .lg\:heading-3 {
+    font-size: var(--heading-3);
+  }
+  .lg\:heading-4 {
+    font-size: var(--heading-4);
+  }
+  .lg\:heading-5 {
+    font-size: var(--heading-5);
+  }
+  .lg\:heading-6 {
+    font-size: var(--heading-6);
+  }
+  .lg\:font-size-xs {
+    font-size: var(--font-size-xs);
+  }
+  .lg\:font-size-sm {
+    font-size: var(--font-size-sm);
+  }
+  .lg\:font-size-md {
+    font-size: var(--font-size-md);
+  }
+  .lg\:font-size-lg {
+    font-size: var(--font-size-lg);
+  }
+  .lg\:font-size-xl {
+    font-size: var(--font-size-xl);
   }
 }
 @media (max-width: 48rem) {
-  .md\:h1, heading-1 {
+  .md\:h1 {
     font-size: var(--heading-1);
   }
-  .md\:h2, heading-2 {
+  .md\:h2 {
     font-size: var(--heading-2);
   }
-  .md\:h3, heading-3 {
+  .md\:h3 {
     font-size: var(--heading-3);
   }
-  .md\:h4, heading-4 {
+  .md\:h4 {
     font-size: var(--heading-4);
   }
-  .md\:h5, heading-5 {
+  .md\:h5 {
     font-size: var(--heading-5);
   }
-  .md\:h6, heading-6 {
+  .md\:h6 {
     font-size: var(--heading-6);
+  }
+  .md\:heading-1 {
+    font-size: var(--heading-1);
+  }
+  .md\:heading-2 {
+    font-size: var(--heading-2);
+  }
+  .md\:heading-3 {
+    font-size: var(--heading-3);
+  }
+  .md\:heading-4 {
+    font-size: var(--heading-4);
+  }
+  .md\:heading-5 {
+    font-size: var(--heading-5);
+  }
+  .md\:heading-6 {
+    font-size: var(--heading-6);
+  }
+  .md\:font-size-xs {
+    font-size: var(--font-size-xs);
+  }
+  .md\:font-size-sm {
+    font-size: var(--font-size-sm);
+  }
+  .md\:font-size-md {
+    font-size: var(--font-size-md);
+  }
+  .md\:font-size-lg {
+    font-size: var(--font-size-lg);
+  }
+  .md\:font-size-xl {
+    font-size: var(--font-size-xl);
   }
 }
 @media (max-width: 40rem) {
-  .sm\:h1, heading-1 {
+  .sm\:h1 {
     font-size: var(--heading-1);
   }
-  .sm\:h2, heading-2 {
+  .sm\:h2 {
     font-size: var(--heading-2);
   }
-  .sm\:h3, heading-3 {
+  .sm\:h3 {
     font-size: var(--heading-3);
   }
-  .sm\:h4, heading-4 {
+  .sm\:h4 {
     font-size: var(--heading-4);
   }
-  .sm\:h5, heading-5 {
+  .sm\:h5 {
     font-size: var(--heading-5);
   }
-  .sm\:h6, heading-6 {
+  .sm\:h6 {
     font-size: var(--heading-6);
+  }
+  .sm\:heading-1 {
+    font-size: var(--heading-1);
+  }
+  .sm\:heading-2 {
+    font-size: var(--heading-2);
+  }
+  .sm\:heading-3 {
+    font-size: var(--heading-3);
+  }
+  .sm\:heading-4 {
+    font-size: var(--heading-4);
+  }
+  .sm\:heading-5 {
+    font-size: var(--heading-5);
+  }
+  .sm\:heading-6 {
+    font-size: var(--heading-6);
+  }
+  .sm\:font-size-xs {
+    font-size: var(--font-size-xs);
+  }
+  .sm\:font-size-sm {
+    font-size: var(--font-size-sm);
+  }
+  .sm\:font-size-md {
+    font-size: var(--font-size-md);
+  }
+  .sm\:font-size-lg {
+    font-size: var(--font-size-lg);
+  }
+  .sm\:font-size-xl {
+    font-size: var(--font-size-xl);
   }
 }

@@ -59,9 +59,23 @@ $headingClasses: 'h', 'heading-';
 	@include abstract.responsive-class(
 		false,
 		$breakpoint,
-		$headingClasses
+		'h'
 	) {
 		@include heading;
+	}
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'heading-'
+	) {
+		@include heading;
+	}
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'font'
+	) {
+		@include font-size;
 	}
 }
 //#endregion
