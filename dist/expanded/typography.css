@@ -62,3 +62,104 @@ small {
 .heading-6 {
   font-size: var(--heading-6);
 }
+
+@media (max-width: 96rem) {
+  .\32 xl\:h1, heading-1 {
+    font-size: var(--heading-1);
+  }
+  .\32 xl\:h2, heading-2 {
+    font-size: var(--heading-2);
+  }
+  .\32 xl\:h3, heading-3 {
+    font-size: var(--heading-3);
+  }
+  .\32 xl\:h4, heading-4 {
+    font-size: var(--heading-4);
+  }
+  .\32 xl\:h5, heading-5 {
+    font-size: var(--heading-5);
+  }
+  .\32 xl\:h6, heading-6 {
+    font-size: var(--heading-6);
+  }
+}
+@media (max-width: 80rem) {
+  .xl\:h1, heading-1 {
+    font-size: var(--heading-1);
+  }
+  .xl\:h2, heading-2 {
+    font-size: var(--heading-2);
+  }
+  .xl\:h3, heading-3 {
+    font-size: var(--heading-3);
+  }
+  .xl\:h4, heading-4 {
+    font-size: var(--heading-4);
+  }
+  .xl\:h5, heading-5 {
+    font-size: var(--heading-5);
+  }
+  .xl\:h6, heading-6 {
+    font-size: var(--heading-6);
+  }
+}
+@media (max-width: 64rem) {
+  .lg\:h1, heading-1 {
+    font-size: var(--heading-1);
+  }
+  .lg\:h2, heading-2 {
+    font-size: var(--heading-2);
+  }
+  .lg\:h3, heading-3 {
+    font-size: var(--heading-3);
+  }
+  .lg\:h4, heading-4 {
+    font-size: var(--heading-4);
+  }
+  .lg\:h5, heading-5 {
+    font-size: var(--heading-5);
+  }
+  .lg\:h6, heading-6 {
+    font-size: var(--heading-6);
+  }
+}
+@media (max-width: 48rem) {
+  .md\:h1, heading-1 {
+    font-size: var(--heading-1);
+  }
+  .md\:h2, heading-2 {
+    font-size: var(--heading-2);
+  }
+  .md\:h3, heading-3 {
+    font-size: var(--heading-3);
+  }
+  .md\:h4, heading-4 {
+    font-size: var(--heading-4);
+  }
+  .md\:h5, heading-5 {
+    font-size: var(--heading-5);
+  }
+  .md\:h6, heading-6 {
+    font-size: var(--heading-6);
+  }
+}
+@media (max-width: 40rem) {
+  .sm\:h1, heading-1 {
+    font-size: var(--heading-1);
+  }
+  .sm\:h2, heading-2 {
+    font-size: var(--heading-2);
+  }
+  .sm\:h3, heading-3 {
+    font-size: var(--heading-3);
+  }
+  .sm\:h4, heading-4 {
+    font-size: var(--heading-4);
+  }
+  .sm\:h5, heading-5 {
+    font-size: var(--heading-5);
+  }
+  .sm\:h6, heading-6 {
+    font-size: var(--heading-6);
+  }
+}

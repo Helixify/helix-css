@@ -1,3 +1,5 @@
+@use '../../abstracts' as abstract;
+
 @mixin base {
 	:is(body) {
 		font-family: var(--font-family-text);
@@ -51,11 +53,13 @@
 //#region Responsive
 // Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
 
+$headingClasses: 'h', 'heading-';
+
 @mixin responsive($breakpoint) {
 	@include abstract.responsive-class(
 		false,
 		$breakpoint,
-		'h, heading'
+		$headingClasses
 	) {
 		@include heading;
 	}
