@@ -70,3 +70,26 @@
 	}
 }
 //#endregion
+
+//#region Property
+// Mixin
+@mixin property($property, $classes...) {
+	@each $class in $classes {
+		&-#{$class} {
+			#{$property}: $class;
+		}
+	}
+}
+//#endregion
+
+//#region Property name
+// Mixin
+
+@mixin property-name($name, $property, $values...) {
+	@each $value in $values {
+		&-#{$name}-#{$value} {
+			#{$property}: $value;
+		}
+	}
+}
+//#endregion

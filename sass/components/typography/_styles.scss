@@ -20,7 +20,21 @@
 	color: var(--heading-color);
 }
 
-.h,
-.heading- {
+.h {
 	@include mixins.heading;
+}
+
+.font {
+	@include mixins.font-size;
+	@include mixins.font-style;
+	@include mixins.font-weight;
+}
+
+.text {
+	@include mixins.text-align;
+	@include mixins.text-decoration;
+}
+
+.line-height {
+	@include mixins.line-height;
 }

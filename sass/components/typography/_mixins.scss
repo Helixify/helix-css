@@ -22,7 +22,8 @@
 
 @mixin heading {
 	@for $i from 1 through 6 {
-		&#{$i} {
+		&#{$i},
+		&eading-#{$i} {
 			font-size: var(--heading-#{$i});
 		}
 	}
@@ -50,10 +51,103 @@
 	}
 }
 
+@mixin font-weight {
+	&-weight {
+		&-100,
+		&-thin {
+			font-weight: 100;
+		}
+
+		&-200,
+		&-extra-light {
+			font-weight: 200;
+		}
+
+		&-300,
+		&-light {
+			font-weight: 300;
+		}
+
+		&-400,
+		&-regular {
+			font-weight: 400;
+		}
+
+		&-500,
+		&-medium {
+			font-weight: 500;
+		}
+
+		&-600,
+		&-semi-bold {
+			font-weight: 600;
+		}
+
+		&-700,
+		&-bold {
+			font-weight: 700;
+		}
+
+		&-800,
+		&-extra-bold {
+			font-weight: 800;
+		}
+
+		&-900,
+		&-black {
+			font-weight: 900;
+		}
+
+		&-1000,
+		&-weight {
+			font-weight: 1000;
+		}
+	}
+}
+
+@mixin font-style {
+	@include abstract.property-name(
+		style,
+		font-style,
+		normal,
+		italic,
+		oblique
+	);
+}
+
+@mixin text-decoration {
+	@include abstract.property-name(
+		decoration,
+		text-decoration,
+		none,
+		underline,
+		overline,
+		line-through
+	);
+}
+
+@mixin line-height {
+	&-none {
+		line-height: 1;
+	}
+	&-default {
+		line-height: var(--font-line-height);
+	}
+}
+
+// Mixin text align
+@mixin text-align {
+	@include abstract.property-name(
+		align,
+		text-align,
+		left,
+		center,
+		right
+	);
+}
+
 //#region Responsive
 // Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
-
-$headingClasses: 'h', 'heading-';
 
 @mixin responsive($breakpoint) {
 	@include abstract.responsive-class(
@@ -66,16 +160,26 @@ $headingClasses: 'h', 'heading-';
 	@include abstract.responsive-class(
 		false,
 		$breakpoint,
-		'heading-'
+		'font'
 	) {
-		@include heading;
+		@include font-size;
+		@include font-style;
+		@include font-weight;
 	}
 	@include abstract.responsive-class(
 		false,
 		$breakpoint,
-		'font'
+		'text'
 	) {
-		@include font-size;
+		@include text-align;
+		@include text-decoration;
+	}
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'line-height'
+	) {
+		@include line-height;
 	}
 }
 //#endregion
