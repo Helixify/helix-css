@@ -93,3 +93,42 @@
 	}
 }
 //#endregion
+
+//#region Flexbox mixin
+// This mixin is responsible for creating the flexbox properties in both components
+
+@mixin display-flex {
+	&-flex {
+		display: flex;
+
+		&-start {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		&-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&-end {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+	}
+
+	&-inline-flex {
+		display: inline-flex;
+
+		&-center {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+// #endregion
