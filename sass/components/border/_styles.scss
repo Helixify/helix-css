@@ -1,0 +1,6 @@
+@use 'mixins' as mixins;
+
+.border {
+	@include mixins.radius;
+	@include mixins.style;
+}

@@ -1,0 +1,45 @@
+@use '../../abstracts' as abstract;
+@use 'variables' as variables;
+
+@mixin radius {
+	&-radius-none {
+		border-radius: 0;
+	}
+	@each $r in variables.$range {
+		&-radius-#{$r} {
+			border-radius: var(--radius-#{$r});
+		}
+	}
+}
+
+@mixin style {
+	@include abstract.property-name(
+		style,
+		border-style,
+		none,
+		hidden,
+		dotted,
+		dashed,
+		solid,
+		double,
+		groove,
+		ridge,
+		inset,
+		outset
+	);
+}
+
+//#region Responsive
+// Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
+
+@mixin responsive($breakpoint) {
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'border'
+	) {
+		@include radius;
+		@include style;
+	}
+}
+//#endregion
