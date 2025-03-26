@@ -1,14 +1,14 @@
 @use '../../abstracts/mixins' as abstract;
-@use 'mixins' as flexbox;
+@use 'mixins' as m;
 
 .ds {
 	@include abstract.display-flex;
 }
 
 .flow {
-	@include flexbox.flex-flow;
+	@include m.flex-flow;
 }
 
 .flex {
-	@include flexbox.flex-bgs;
+	@include m.flex-bgs;
 }

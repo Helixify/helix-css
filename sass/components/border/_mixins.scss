@@ -1,11 +1,11 @@
 @use '../../abstracts' as abstract;
-@use 'variables' as variables;
+@use 'variables' as v;
 
 @mixin radius {
 	&-radius-none {
 		border-radius: 0;
 	}
-	@each $r in variables.$range {
+	@each $r in v.$range {
 		&-radius-#{$r} {
 			border-radius: var(--radius-#{$r});
 		}
