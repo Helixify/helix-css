@@ -2,6 +2,18 @@
   Helix CSS
   Module: Border
 */
+:root {
+  --radius-3xs: var(--2);
+  --radius-2xs: var(--3);
+  --radius-xs: var(--4);
+  --radius-sm: var(--5);
+  --radius-md: var(--6);
+  --radius-lg: var(--7);
+  --radius-xl: var(--8);
+  --radius-2xl: var(--9);
+  --radius-3xl: var(--10);
+}
+
 .border-radius-none {
   border-radius: 0;
 }
