@@ -2,6 +2,4 @@
   Helix CSS
   Module: Form
 */
-body {
-	content: 'form';
-}
+@use 'components/form';

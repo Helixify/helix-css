@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*  
   Helix CSS
 */
@@ -19,242 +20,148 @@
   --14: 3rem;
   --15: 3.5rem;
   --16: 4rem;
-  --font-family: ui-sans-serif, -apple-system,
-  	BlinkMacSystemFont, "Segoe UI", Helvetica,
-  	"Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
-  	"Segoe UI Symbol";
-  --font-family-heading: var(--font-family);
-  --font-family-text: var(--font-family);
-  --font-family-code: var(--font-family);
-  --font-weight-heading: 600;
-  --font-weight-text: 400;
-  --font-weight-code: var(--font-family-text);
-  --heading-1: 2.5em;
-  --heading-2: 2em;
-  --heading-3: 1.5em;
-  --heading-4: 1.25em;
-  --heading-5: 1em;
-  --heading-6: 0.75em;
-  --heading-line-height: 100%;
-  --font-line-height: 1.4;
-  --font-size-xs: 0.75em;
-  --font-size-sm: 0.875em;
-  --font-size-md: 1em;
-  --font-size-lg: 1.25em;
-  --font-size-xl: 1.5em;
-  --small-size: 0.75rem;
-  --heading-color: initial;
-  --text-color: initial;
-  --code-color: initial;
-  --radius-3xs: var(--2);
-  --radius-2xs: var(--3);
-  --radius-xs: var(--4);
-  --radius-sm: var(--5);
-  --radius-md: var(--6);
-  --radius-lg: var(--7);
-  --radius-xl: var(--8);
-  --radius-2xl: var(--9);
-  --radius-3xl: var(--10);
+  --form-highlight: hsl(220, 90%, 60%);
+  --form-highlight-active: hsla(
+  	var(--form-highlight),
+  	0.32
+  );
+  --form-border-color: 0, 0%, 40%;
+  --form-border-width: 1px;
+  --form-outline-width: 2px;
 }
 
-.border-radius-none {
-  border-radius: 0;
-}
-.border-radius-3xs {
-  border-radius: var(--radius-3xs);
-}
-.border-radius-2xs {
-  border-radius: var(--radius-2xs);
-}
-.border-radius-xs {
-  border-radius: var(--radius-xs);
-}
-.border-radius-sm {
-  border-radius: var(--radius-sm);
-}
-.border-radius-md {
-  border-radius: var(--radius-md);
-}
-.border-radius-lg {
-  border-radius: var(--radius-lg);
-}
-.border-radius-xl {
-  border-radius: var(--radius-xl);
-}
-.border-radius-2xl {
-  border-radius: var(--radius-2xl);
-}
-.border-radius-3xl {
-  border-radius: var(--radius-3xl);
-}
-.border-style-none {
-  border-style: none;
-}
-.border-style-hidden {
-  border-style: hidden;
-}
-.border-style-dotted {
-  border-style: dotted;
-}
-.border-style-dashed {
-  border-style: dashed;
-}
-.border-style-solid {
+:where(button, input, textarea, select, a.button),
+:where(input[type=file])::file-selector-button {
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
   border-style: solid;
-}
-.border-style-double {
-  border-style: double;
-}
-.border-style-groove {
-  border-style: groove;
-}
-.border-style-ridge {
-  border-style: ridge;
-}
-.border-style-inset {
-  border-style: inset;
-}
-.border-style-outset {
-  border-style: outset;
-}
-
-:is(body) {
-  font-family: var(--font-family-text);
-  font-weight: var(--font-weight-text);
-  color: var(--text-color);
-  line-height: var(--font-line-height);
-}
-
-:is(code) {
-  font-family: var(--font-family-code);
-  font-weight: var(--font-weight-code);
-  color: var(--code-color);
-  line-height: var(--font-line-height);
-}
-
-small {
-  font-size: var(--small-size);
-}
-
-.h1,
-.heading-1,
-.h2,
-.heading-2,
-.h3,
-.heading-3,
-.h4,
-.heading-4,
-.h5,
-.heading-5,
-.h6,
-.heading-6 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--heading-line-height);
-  color: var(--heading-color);
-}
-
-.h1, .heading-1 {
-  font-size: var(--heading-1);
-}
-.h2, .heading-2 {
-  font-size: var(--heading-2);
-}
-.h3, .heading-3 {
-  font-size: var(--heading-3);
-}
-.h4, .heading-4 {
-  font-size: var(--heading-4);
-}
-.h5, .heading-5 {
-  font-size: var(--heading-5);
-}
-.h6, .heading-6 {
-  font-size: var(--heading-6);
-}
-
-.font-size-xs {
-  font-size: var(--font-size-xs);
-}
-.font-size-sm {
-  font-size: var(--font-size-sm);
-}
-.font-size-md {
-  font-size: var(--font-size-md);
-}
-.font-size-lg {
-  font-size: var(--font-size-lg);
-}
-.font-size-xl {
-  font-size: var(--font-size-xl);
-}
-.font-style-normal {
-  font-style: normal;
-}
-.font-style-italic {
-  font-style: italic;
-}
-.font-style-oblique {
-  font-style: oblique;
-}
-.font-weight-100, .font-weight-thin {
-  font-weight: 100;
-}
-.font-weight-200, .font-weight-extra-light {
-  font-weight: 200;
-}
-.font-weight-300, .font-weight-light {
-  font-weight: 300;
-}
-.font-weight-400, .font-weight-regular {
-  font-weight: 400;
-}
-.font-weight-500, .font-weight-medium {
-  font-weight: 500;
-}
-.font-weight-600, .font-weight-semi-bold {
-  font-weight: 600;
-}
-.font-weight-700, .font-weight-bold {
-  font-weight: 700;
-}
-.font-weight-800, .font-weight-extra-bold {
-  font-weight: 800;
-}
-.font-weight-900, .font-weight-black {
-  font-weight: 900;
-}
-.font-weight-1000, .font-weight-weight {
-  font-weight: 1000;
-}
-
-.text-align-left {
-  text-align: left;
-}
-.text-align-center {
-  text-align: center;
-}
-.text-align-right {
-  text-align: right;
-}
-.text-decoration-none {
-  text-decoration: none;
-}
-.text-decoration-underline {
-  text-decoration: underline;
-}
-.text-decoration-overline {
-  text-decoration: overline;
-}
-.text-decoration-line-through {
-  text-decoration: line-through;
-}
-
-.line-height-none {
+  border-width: var(--form-border-width);
+  border-color: var(--form-border-color);
+  border-radius: 0.25rem;
+  outline-color: transparent;
+  outline-width: var(--form-border-width);
+  outline-style: solid;
+  outline-offset: -0.0625rem;
   line-height: 1;
 }
-.line-height-default {
-  line-height: var(--font-line-height);
+
+:where(input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=search],
+input[type=number],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+select,
+textarea) {
+  cursor: text;
+}
+:where(input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=search],
+input[type=number],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+select,
+textarea):where(:not(:active)):focus-visible {
+  border-color: var(--form-highlight);
+  outline-width: var(--form-outline-width);
+  outline-color: var(--form-highlight-active);
+  outline-offset: 0px;
+}
+
+:where(input[type=file]) {
+  padding: var(--form-outline-width);
+  border: none;
+  cursor: pointer;
+}
+
+:where(button,
+input[type=button],
+input[type=submit],
+input[type=reset],
+a.button),
+:where(input[type=file])::file-selector-button {
+  cursor: pointer;
+  line-height: 1.13;
+}
+:where(button,
+input[type=button],
+input[type=submit],
+input[type=reset],
+a.button):where(:not(:active)):hover,
+:where(input[type=file])::file-selector-button:where(:not(:active)):hover {
+  border-color: var(--form-highlight);
+  outline-width: var(--form-outline-width);
+  outline-color: var(--form-highlight-active);
+  outline-offset: 0px;
+}
+
+:where(button,
+input[type=button],
+input[type=submit],
+input[type=reset],
+a.button),
+:where(input[type=checkbox], input[type=radio]) {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-color: var(--form-border-color);
+}
+:where(button,
+input[type=button],
+input[type=submit],
+input[type=reset],
+a.button):focus,
+:where(input[type=checkbox], input[type=radio]):focus {
+  border-color: var(--form-highlight);
+  outline-width: var(--form-outline-width);
+  outline-color: var(--form-highlight-active);
+  outline-offset: 0px;
+}
+:where(button,
+input[type=button],
+input[type=submit],
+input[type=reset],
+a.button):checked,
+:where(input[type=checkbox], input[type=radio]):checked {
+  border-color: var(--form-highlight);
+}
+
+:where(input[type=checkbox]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+:where(input[type=checkbox]):checked {
+  background-color: var(--form-highlight);
+}
+:where(input[type=checkbox]):checked::after {
+  content: "✓";
+  color: white;
+  font-size: 1em;
+  position: relative;
+}
+
+:where(input[type=radio]) {
+  border-radius: 50%;
+  position: relative;
+}
+:where(input[type=radio]):checked::after {
+  content: "";
+  position: absolute;
+  inset: 0.125rem;
+  border-radius: 50%;
+  background-color: var(--form-highlight);
 }
 
 @media (max-width: 96rem) {

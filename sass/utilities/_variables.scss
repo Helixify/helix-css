@@ -1,10 +1,9 @@
 @use '../abstracts/mixins' as mixins;
 @use '../components/typography/variables' as typography;
 @use '../components/border/variables' as border;
+@use '../components/form/variables' as form;
 
 :root {
 	@include mixins.var-size;
-
-	@include typography.variables;
-	@include border.variables;
+	@include form.variables;
 }
