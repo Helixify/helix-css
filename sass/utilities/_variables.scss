@@ -2,8 +2,9 @@
 @use '../components/typography/variables' as typography;
 @use '../components/border/variables' as border;
 @use '../components/form/variables' as form;
+@use '../components/gap/variables' as gap;
 
 :root {
 	@include mixins.var-size;
-	@include form.variables;
+	@include gap.variables;
 }

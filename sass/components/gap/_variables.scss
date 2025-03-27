@@ -1,0 +1,7 @@
+@use '../../abstracts/variables' as variables;
+
+@mixin variables {
+	@each $num, $name in variables.$sizes-name {
+		--gap-#{$name}: var(--#{$num});
+	}
+}
