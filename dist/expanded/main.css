@@ -38,50 +38,35 @@
   --gap-9xl: var(--16);
 }
 
-.grid-flow-row {
-  grid-auto-flow: row;
+.flow-row-wr {
+  flex-flow: row wrap;
 }
-.grid-flow-col {
-  grid-auto-flow: column;
+.flow-row-nw {
+  flex-flow: row nowrap;
 }
-.grid-flow-dense {
-  grid-auto-flow: dense;
+.flow-row-rev-wr {
+  flex-flow: row-reverse wrap;
 }
-.grid-tpl-col-1 {
-  grid-template-columns: repeat(1, 1fr);
+.flow-row-rev-nw {
+  flex-flow: row-reverse nowrap;
 }
-.grid-tpl-col-2 {
-  grid-template-columns: repeat(2, 1fr);
+.flow-col-wr {
+  flex-flow: column wrap;
 }
-.grid-tpl-col-3 {
-  grid-template-columns: repeat(3, 1fr);
+.flow-col-nw {
+  flex-flow: column nowrap;
 }
-.grid-tpl-col-4 {
-  grid-template-columns: repeat(4, 1fr);
+.flow-col-rev-wr {
+  flex-flow: column-reverse wrap;
 }
-.grid-tpl-col-5 {
-  grid-template-columns: repeat(5, 1fr);
+.flow-col-rev-nw {
+  flex-flow: column-reverse nowrap;
 }
-.grid-tpl-col-6 {
-  grid-template-columns: repeat(6, 1fr);
-}
-.grid-tpl-row-1 {
-  grid-template-rows: repeat(1, 1fr);
-}
-.grid-tpl-row-2 {
-  grid-template-rows: repeat(2, 1fr);
-}
-.grid-tpl-row-3 {
-  grid-template-rows: repeat(3, 1fr);
-}
-.grid-tpl-row-4 {
-  grid-template-rows: repeat(4, 1fr);
-}
-.grid-tpl-row-5 {
-  grid-template-rows: repeat(5, 1fr);
-}
-.grid-tpl-row-6 {
-  grid-template-rows: repeat(6, 1fr);
+
+.flex {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 @media (max-width: 96rem) {

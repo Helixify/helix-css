@@ -1,9 +1,4 @@
-@use '../../abstracts/mixins' as abstract;
 @use 'mixins' as m;
-
-.ds {
-	@include abstract.display-flex;
-}
 
 .flow {
 	@include m.flex-flow;

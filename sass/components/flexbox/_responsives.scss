@@ -7,6 +7,14 @@
 
 @each $breakpoint in map.keys(abstract.$breakpoints) {
 	@include abstract.media-down($breakpoint) {
+		@include abstract.responsive-class(
+			false,
+			$breakpoint,
+			'ds'
+		) {
+			@include abstract.display-flex;
+		}
+
 		@include m.responsive($breakpoint);
 	}
 }

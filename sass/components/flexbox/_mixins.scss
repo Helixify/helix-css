@@ -44,14 +44,6 @@
 	@include abstract.responsive-class(
 		false,
 		$breakpoint,
-		'ds'
-	) {
-		@include abstract.display-flex;
-	}
-
-	@include abstract.responsive-class(
-		false,
-		$breakpoint,
 		'flow'
 	) {
 		@include flex-flow;
