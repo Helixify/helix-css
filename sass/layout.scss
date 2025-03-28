@@ -2,6 +2,4 @@
   Helix CSS
   Module: Layout
 */
-body {
-	content: 'layout';
-}
+@use 'components/layout';

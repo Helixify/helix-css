@@ -14,6 +14,12 @@
 }
 //#endregion
 
+@mixin media-mobile {
+	@include media-down('lg') {
+		@content;
+	}
+}
+
 //#region Responsive class
 // Mixin responsible for creating the prefix for responsive classes
 

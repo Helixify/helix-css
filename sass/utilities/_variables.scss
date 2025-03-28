@@ -3,8 +3,10 @@
 @use '../components/border/variables' as border;
 @use '../components/form/variables' as form;
 @use '../components/gap/variables' as gap;
+@use '../components/layout/variables' as layout;
 
 :root {
 	@include mixins.var-size;
-	@include gap.variables;
+	// @include gap.variables;
+	@include layout.variables;
 }
