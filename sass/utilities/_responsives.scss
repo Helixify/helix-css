@@ -6,6 +6,7 @@
 @use '../components/flexbox/mixins' as flexbox;
 @use '../components/border/mixins' as border;
 @use '../components/grid/mixins' as grid;
+@use '../components/helper/mixins' as helper;
 
 @each $breakpoint in map.keys($breakpoints) {
 	@include media-down($breakpoint) {
@@ -13,6 +14,7 @@
 		// @include typography.responsive($breakpoint);
 		// @include flexbox.responsive($breakpoint);
 		// @include border.responsive($breakpoint);
-		@include grid.responsive($breakpoint);
+		// @include grid.responsive($breakpoint);
+		@include helper.responsive($breakpoint);
 	}
 }
