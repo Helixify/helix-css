@@ -1,41 +1,12 @@
 /*  
   Helix CSS
+  Module: Grid
 */
-:root {
-  --0: 0rem;
-  --1: 0.125rem;
-  --2: 0.25rem;
-  --3: 0.375rem;
-  --4: 0.5rem;
-  --5: 0.75rem;
-  --6: 1rem;
-  --7: 1.25rem;
-  --8: 1.5rem;
-  --9: 1.75rem;
-  --10: 2rem;
-  --11: 2.25rem;
-  --12: 2.5rem;
-  --13: 2.75rem;
-  --14: 3rem;
-  --15: 3.5rem;
-  --16: 4rem;
-  --gap-5xs: var(--0);
-  --gap-4xs: var(--1);
-  --gap-3xs: var(--2);
-  --gap-2xs: var(--3);
-  --gap-xs: var(--4);
-  --gap-sm: var(--5);
-  --gap-md: var(--6);
-  --gap-lg: var(--7);
-  --gap-xl: var(--8);
-  --gap-2xl: var(--9);
-  --gap-3xl: var(--10);
-  --gap-4xl: var(--11);
-  --gap-5xl: var(--12);
-  --gap-6xl: var(--13);
-  --gap-7xl: var(--14);
-  --gap-8xl: var(--15);
-  --gap-9xl: var(--16);
+.ds-grid {
+  display: grid;
+}
+.ds-inline-grid {
+  display: inline-grid;
 }
 
 .grid-flow-row {
@@ -85,6 +56,12 @@
 }
 
 @media (max-width: 96rem) {
+  .\32 xl\:ds-grid {
+    display: grid;
+  }
+  .\32 xl\:ds-inline-grid {
+    display: inline-grid;
+  }
   .\32 xl\:grid-flow-row {
     grid-auto-flow: row;
   }
@@ -132,6 +109,12 @@
   }
 }
 @media (max-width: 80rem) {
+  .xl\:ds-grid {
+    display: grid;
+  }
+  .xl\:ds-inline-grid {
+    display: inline-grid;
+  }
   .xl\:grid-flow-row {
     grid-auto-flow: row;
   }
@@ -179,6 +162,12 @@
   }
 }
 @media (max-width: 64rem) {
+  .lg\:ds-grid {
+    display: grid;
+  }
+  .lg\:ds-inline-grid {
+    display: inline-grid;
+  }
   .lg\:grid-flow-row {
     grid-auto-flow: row;
   }
@@ -226,6 +215,12 @@
   }
 }
 @media (max-width: 48rem) {
+  .md\:ds-grid {
+    display: grid;
+  }
+  .md\:ds-inline-grid {
+    display: inline-grid;
+  }
   .md\:grid-flow-row {
     grid-auto-flow: row;
   }
@@ -273,6 +268,12 @@
   }
 }
 @media (max-width: 40rem) {
+  .sm\:ds-grid {
+    display: grid;
+  }
+  .sm\:ds-inline-grid {
+    display: inline-grid;
+  }
   .sm\:grid-flow-row {
     grid-auto-flow: row;
   }

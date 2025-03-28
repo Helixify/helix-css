@@ -1,0 +1,5 @@
+@use '../../abstracts/mixins' as abstract;
+
+.ds {
+	@include abstract.display-grid;
+}

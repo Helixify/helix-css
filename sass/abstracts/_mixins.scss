@@ -131,4 +131,14 @@
 	}
 }
 
+@mixin display-grid {
+	&-grid {
+		display: grid;
+	}
+
+	&-inline-grid {
+		display: inline-grid;
+	}
+}
+
 // #endregion
