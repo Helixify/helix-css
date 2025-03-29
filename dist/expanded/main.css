@@ -25,361 +25,320 @@
   --container-full: 120rem;
 }
 
-.ps-static {
-  position: static;
+.gap-0, .gap-5xs {
+  gap: var(--gap-5xs);
 }
-.ps-relative {
-  position: relative;
+.gap-1, .gap-4xs {
+  gap: var(--gap-4xs);
 }
-.ps-absolute {
-  position: absolute;
+.gap-2, .gap-3xs {
+  gap: var(--gap-3xs);
 }
-.ps-fixed {
-  position: fixed;
+.gap-3, .gap-2xs {
+  gap: var(--gap-2xs);
 }
-.ps-sticky {
-  position: sticky;
+.gap-4, .gap-xs {
+  gap: var(--gap-xs);
 }
-
-.top-0 {
-  top: 0;
+.gap-5, .gap-sm {
+  gap: var(--gap-sm);
 }
-.top-50 {
-  top: 50%;
+.gap-6, .gap-md {
+  gap: var(--gap-md);
 }
-.top-100 {
-  top: 100%;
+.gap-7, .gap-lg {
+  gap: var(--gap-lg);
 }
-
-.bottom-0 {
-  bottom: 0;
+.gap-8, .gap-xl {
+  gap: var(--gap-xl);
 }
-.bottom-50 {
-  bottom: 50%;
+.gap-9, .gap-2xl {
+  gap: var(--gap-2xl);
 }
-.bottom-100 {
-  bottom: 100%;
+.gap-10, .gap-3xl {
+  gap: var(--gap-3xl);
 }
-
-.left-0 {
-  left: 0;
+.gap-11, .gap-4xl {
+  gap: var(--gap-4xl);
 }
-.left-50 {
-  left: 50%;
+.gap-12, .gap-5xl {
+  gap: var(--gap-5xl);
 }
-.left-100 {
-  left: 100%;
+.gap-13, .gap-6xl {
+  gap: var(--gap-6xl);
 }
-
-.right-0 {
-  right: 0;
+.gap-14, .gap-7xl {
+  gap: var(--gap-7xl);
 }
-.right-50 {
-  right: 50%;
+.gap-15, .gap-8xl {
+  gap: var(--gap-8xl);
 }
-.right-100 {
-  right: 100%;
-}
-
-.inset-auto {
-  inset: auto;
-}
-.inset-0 {
-  inset: 0;
+.gap-16, .gap-9xl {
+  gap: var(--gap-9xl);
 }
 
 @media (max-width: 96rem) {
-  .\32 xl\:ps-static {
-    position: static;
+  .\32 xl\:gap-0, .\32 xl\:gap-5xs {
+    gap: var(--gap-5xs);
   }
-  .\32 xl\:ps-relative {
-    position: relative;
+  .\32 xl\:gap-1, .\32 xl\:gap-4xs {
+    gap: var(--gap-4xs);
   }
-  .\32 xl\:ps-absolute {
-    position: absolute;
+  .\32 xl\:gap-2, .\32 xl\:gap-3xs {
+    gap: var(--gap-3xs);
   }
-  .\32 xl\:ps-fixed {
-    position: fixed;
+  .\32 xl\:gap-3, .\32 xl\:gap-2xs {
+    gap: var(--gap-2xs);
   }
-  .\32 xl\:ps-sticky {
-    position: sticky;
+  .\32 xl\:gap-4, .\32 xl\:gap-xs {
+    gap: var(--gap-xs);
   }
-  .\32 xl\:top-0 {
-    top: 0;
+  .\32 xl\:gap-5, .\32 xl\:gap-sm {
+    gap: var(--gap-sm);
   }
-  .\32 xl\:top-50 {
-    top: 50%;
+  .\32 xl\:gap-6, .\32 xl\:gap-md {
+    gap: var(--gap-md);
   }
-  .\32 xl\:top-100 {
-    top: 100%;
+  .\32 xl\:gap-7, .\32 xl\:gap-lg {
+    gap: var(--gap-lg);
   }
-  .\32 xl\:bottom-0 {
-    bottom: 0;
+  .\32 xl\:gap-8, .\32 xl\:gap-xl {
+    gap: var(--gap-xl);
   }
-  .\32 xl\:bottom-50 {
-    bottom: 50%;
+  .\32 xl\:gap-9, .\32 xl\:gap-2xl {
+    gap: var(--gap-2xl);
   }
-  .\32 xl\:bottom-100 {
-    bottom: 100%;
+  .\32 xl\:gap-10, .\32 xl\:gap-3xl {
+    gap: var(--gap-3xl);
   }
-  .\32 xl\:left-0 {
-    left: 0;
+  .\32 xl\:gap-11, .\32 xl\:gap-4xl {
+    gap: var(--gap-4xl);
   }
-  .\32 xl\:left-50 {
-    left: 50%;
+  .\32 xl\:gap-12, .\32 xl\:gap-5xl {
+    gap: var(--gap-5xl);
   }
-  .\32 xl\:left-100 {
-    left: 100%;
+  .\32 xl\:gap-13, .\32 xl\:gap-6xl {
+    gap: var(--gap-6xl);
   }
-  .\32 xl\:right-0 {
-    right: 0;
+  .\32 xl\:gap-14, .\32 xl\:gap-7xl {
+    gap: var(--gap-7xl);
   }
-  .\32 xl\:right-50 {
-    right: 50%;
+  .\32 xl\:gap-15, .\32 xl\:gap-8xl {
+    gap: var(--gap-8xl);
   }
-  .\32 xl\:right-100 {
-    right: 100%;
-  }
-  .\32 xl\:inset-auto {
-    inset: auto;
-  }
-  .\32 xl\:inset-0 {
-    inset: 0;
+  .\32 xl\:gap-16, .\32 xl\:gap-9xl {
+    gap: var(--gap-9xl);
   }
 }
 @media (max-width: 80rem) {
-  .xl\:ps-static {
-    position: static;
+  .xl\:gap-0, .xl\:gap-5xs {
+    gap: var(--gap-5xs);
   }
-  .xl\:ps-relative {
-    position: relative;
+  .xl\:gap-1, .xl\:gap-4xs {
+    gap: var(--gap-4xs);
   }
-  .xl\:ps-absolute {
-    position: absolute;
+  .xl\:gap-2, .xl\:gap-3xs {
+    gap: var(--gap-3xs);
   }
-  .xl\:ps-fixed {
-    position: fixed;
+  .xl\:gap-3, .xl\:gap-2xs {
+    gap: var(--gap-2xs);
   }
-  .xl\:ps-sticky {
-    position: sticky;
+  .xl\:gap-4, .xl\:gap-xs {
+    gap: var(--gap-xs);
   }
-  .xl\:top-0 {
-    top: 0;
+  .xl\:gap-5, .xl\:gap-sm {
+    gap: var(--gap-sm);
   }
-  .xl\:top-50 {
-    top: 50%;
+  .xl\:gap-6, .xl\:gap-md {
+    gap: var(--gap-md);
   }
-  .xl\:top-100 {
-    top: 100%;
+  .xl\:gap-7, .xl\:gap-lg {
+    gap: var(--gap-lg);
   }
-  .xl\:bottom-0 {
-    bottom: 0;
+  .xl\:gap-8, .xl\:gap-xl {
+    gap: var(--gap-xl);
   }
-  .xl\:bottom-50 {
-    bottom: 50%;
+  .xl\:gap-9, .xl\:gap-2xl {
+    gap: var(--gap-2xl);
   }
-  .xl\:bottom-100 {
-    bottom: 100%;
+  .xl\:gap-10, .xl\:gap-3xl {
+    gap: var(--gap-3xl);
   }
-  .xl\:left-0 {
-    left: 0;
+  .xl\:gap-11, .xl\:gap-4xl {
+    gap: var(--gap-4xl);
   }
-  .xl\:left-50 {
-    left: 50%;
+  .xl\:gap-12, .xl\:gap-5xl {
+    gap: var(--gap-5xl);
   }
-  .xl\:left-100 {
-    left: 100%;
+  .xl\:gap-13, .xl\:gap-6xl {
+    gap: var(--gap-6xl);
   }
-  .xl\:right-0 {
-    right: 0;
+  .xl\:gap-14, .xl\:gap-7xl {
+    gap: var(--gap-7xl);
   }
-  .xl\:right-50 {
-    right: 50%;
+  .xl\:gap-15, .xl\:gap-8xl {
+    gap: var(--gap-8xl);
   }
-  .xl\:right-100 {
-    right: 100%;
-  }
-  .xl\:inset-auto {
-    inset: auto;
-  }
-  .xl\:inset-0 {
-    inset: 0;
+  .xl\:gap-16, .xl\:gap-9xl {
+    gap: var(--gap-9xl);
   }
 }
 @media (max-width: 64rem) {
-  .lg\:ps-static {
-    position: static;
+  .lg\:gap-0, .lg\:gap-5xs {
+    gap: var(--gap-5xs);
   }
-  .lg\:ps-relative {
-    position: relative;
+  .lg\:gap-1, .lg\:gap-4xs {
+    gap: var(--gap-4xs);
   }
-  .lg\:ps-absolute {
-    position: absolute;
+  .lg\:gap-2, .lg\:gap-3xs {
+    gap: var(--gap-3xs);
   }
-  .lg\:ps-fixed {
-    position: fixed;
+  .lg\:gap-3, .lg\:gap-2xs {
+    gap: var(--gap-2xs);
   }
-  .lg\:ps-sticky {
-    position: sticky;
+  .lg\:gap-4, .lg\:gap-xs {
+    gap: var(--gap-xs);
   }
-  .lg\:top-0 {
-    top: 0;
+  .lg\:gap-5, .lg\:gap-sm {
+    gap: var(--gap-sm);
   }
-  .lg\:top-50 {
-    top: 50%;
+  .lg\:gap-6, .lg\:gap-md {
+    gap: var(--gap-md);
   }
-  .lg\:top-100 {
-    top: 100%;
+  .lg\:gap-7, .lg\:gap-lg {
+    gap: var(--gap-lg);
   }
-  .lg\:bottom-0 {
-    bottom: 0;
+  .lg\:gap-8, .lg\:gap-xl {
+    gap: var(--gap-xl);
   }
-  .lg\:bottom-50 {
-    bottom: 50%;
+  .lg\:gap-9, .lg\:gap-2xl {
+    gap: var(--gap-2xl);
   }
-  .lg\:bottom-100 {
-    bottom: 100%;
+  .lg\:gap-10, .lg\:gap-3xl {
+    gap: var(--gap-3xl);
   }
-  .lg\:left-0 {
-    left: 0;
+  .lg\:gap-11, .lg\:gap-4xl {
+    gap: var(--gap-4xl);
   }
-  .lg\:left-50 {
-    left: 50%;
+  .lg\:gap-12, .lg\:gap-5xl {
+    gap: var(--gap-5xl);
   }
-  .lg\:left-100 {
-    left: 100%;
+  .lg\:gap-13, .lg\:gap-6xl {
+    gap: var(--gap-6xl);
   }
-  .lg\:right-0 {
-    right: 0;
+  .lg\:gap-14, .lg\:gap-7xl {
+    gap: var(--gap-7xl);
   }
-  .lg\:right-50 {
-    right: 50%;
+  .lg\:gap-15, .lg\:gap-8xl {
+    gap: var(--gap-8xl);
   }
-  .lg\:right-100 {
-    right: 100%;
-  }
-  .lg\:inset-auto {
-    inset: auto;
-  }
-  .lg\:inset-0 {
-    inset: 0;
+  .lg\:gap-16, .lg\:gap-9xl {
+    gap: var(--gap-9xl);
   }
 }
 @media (max-width: 48rem) {
-  .md\:ps-static {
-    position: static;
+  .md\:gap-0, .md\:gap-5xs {
+    gap: var(--gap-5xs);
   }
-  .md\:ps-relative {
-    position: relative;
+  .md\:gap-1, .md\:gap-4xs {
+    gap: var(--gap-4xs);
   }
-  .md\:ps-absolute {
-    position: absolute;
+  .md\:gap-2, .md\:gap-3xs {
+    gap: var(--gap-3xs);
   }
-  .md\:ps-fixed {
-    position: fixed;
+  .md\:gap-3, .md\:gap-2xs {
+    gap: var(--gap-2xs);
   }
-  .md\:ps-sticky {
-    position: sticky;
+  .md\:gap-4, .md\:gap-xs {
+    gap: var(--gap-xs);
   }
-  .md\:top-0 {
-    top: 0;
+  .md\:gap-5, .md\:gap-sm {
+    gap: var(--gap-sm);
   }
-  .md\:top-50 {
-    top: 50%;
+  .md\:gap-6, .md\:gap-md {
+    gap: var(--gap-md);
   }
-  .md\:top-100 {
-    top: 100%;
+  .md\:gap-7, .md\:gap-lg {
+    gap: var(--gap-lg);
   }
-  .md\:bottom-0 {
-    bottom: 0;
+  .md\:gap-8, .md\:gap-xl {
+    gap: var(--gap-xl);
   }
-  .md\:bottom-50 {
-    bottom: 50%;
+  .md\:gap-9, .md\:gap-2xl {
+    gap: var(--gap-2xl);
   }
-  .md\:bottom-100 {
-    bottom: 100%;
+  .md\:gap-10, .md\:gap-3xl {
+    gap: var(--gap-3xl);
   }
-  .md\:left-0 {
-    left: 0;
+  .md\:gap-11, .md\:gap-4xl {
+    gap: var(--gap-4xl);
   }
-  .md\:left-50 {
-    left: 50%;
+  .md\:gap-12, .md\:gap-5xl {
+    gap: var(--gap-5xl);
   }
-  .md\:left-100 {
-    left: 100%;
+  .md\:gap-13, .md\:gap-6xl {
+    gap: var(--gap-6xl);
   }
-  .md\:right-0 {
-    right: 0;
+  .md\:gap-14, .md\:gap-7xl {
+    gap: var(--gap-7xl);
   }
-  .md\:right-50 {
-    right: 50%;
+  .md\:gap-15, .md\:gap-8xl {
+    gap: var(--gap-8xl);
   }
-  .md\:right-100 {
-    right: 100%;
-  }
-  .md\:inset-auto {
-    inset: auto;
-  }
-  .md\:inset-0 {
-    inset: 0;
+  .md\:gap-16, .md\:gap-9xl {
+    gap: var(--gap-9xl);
   }
 }
 @media (max-width: 40rem) {
-  .sm\:ps-static {
-    position: static;
+  .sm\:gap-0, .sm\:gap-5xs {
+    gap: var(--gap-5xs);
   }
-  .sm\:ps-relative {
-    position: relative;
+  .sm\:gap-1, .sm\:gap-4xs {
+    gap: var(--gap-4xs);
   }
-  .sm\:ps-absolute {
-    position: absolute;
+  .sm\:gap-2, .sm\:gap-3xs {
+    gap: var(--gap-3xs);
   }
-  .sm\:ps-fixed {
-    position: fixed;
+  .sm\:gap-3, .sm\:gap-2xs {
+    gap: var(--gap-2xs);
   }
-  .sm\:ps-sticky {
-    position: sticky;
+  .sm\:gap-4, .sm\:gap-xs {
+    gap: var(--gap-xs);
   }
-  .sm\:top-0 {
-    top: 0;
+  .sm\:gap-5, .sm\:gap-sm {
+    gap: var(--gap-sm);
   }
-  .sm\:top-50 {
-    top: 50%;
+  .sm\:gap-6, .sm\:gap-md {
+    gap: var(--gap-md);
   }
-  .sm\:top-100 {
-    top: 100%;
+  .sm\:gap-7, .sm\:gap-lg {
+    gap: var(--gap-lg);
   }
-  .sm\:bottom-0 {
-    bottom: 0;
+  .sm\:gap-8, .sm\:gap-xl {
+    gap: var(--gap-xl);
   }
-  .sm\:bottom-50 {
-    bottom: 50%;
+  .sm\:gap-9, .sm\:gap-2xl {
+    gap: var(--gap-2xl);
   }
-  .sm\:bottom-100 {
-    bottom: 100%;
+  .sm\:gap-10, .sm\:gap-3xl {
+    gap: var(--gap-3xl);
   }
-  .sm\:left-0 {
-    left: 0;
+  .sm\:gap-11, .sm\:gap-4xl {
+    gap: var(--gap-4xl);
   }
-  .sm\:left-50 {
-    left: 50%;
+  .sm\:gap-12, .sm\:gap-5xl {
+    gap: var(--gap-5xl);
   }
-  .sm\:left-100 {
-    left: 100%;
+  .sm\:gap-13, .sm\:gap-6xl {
+    gap: var(--gap-6xl);
   }
-  .sm\:right-0 {
-    right: 0;
+  .sm\:gap-14, .sm\:gap-7xl {
+    gap: var(--gap-7xl);
   }
-  .sm\:right-50 {
-    right: 50%;
+  .sm\:gap-15, .sm\:gap-8xl {
+    gap: var(--gap-8xl);
   }
-  .sm\:right-100 {
-    right: 100%;
-  }
-  .sm\:inset-auto {
-    inset: auto;
-  }
-  .sm\:inset-0 {
-    inset: 0;
+  .sm\:gap-16, .sm\:gap-9xl {
+    gap: var(--gap-9xl);
   }
 }

@@ -1,10 +1,20 @@
-@use '../../abstracts/variables' as variables;
+@use '../../abstracts' as abstract;
 
 @mixin gap {
-	@each $num, $name in variables.$sizes-name {
+	@each $num, $name in abstract.$sizes-name {
 		&-#{$num},
 		&-#{$name} {
 			gap: var(--gap-#{$name});
 		}
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'gap'
+	) {
+		@include gap;
 	}
 }
