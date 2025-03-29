@@ -66,18 +66,10 @@
 	flex-shrink: 1;
 
 	@for $i from 0 through 12 {
-		&.is-#{$i} {
+		&.col-#{$i} {
 			flex: none;
 			width: #{math.div($i, 12) * 100%};
-
-			@include mixins.media-mobile {
-				width: 100%;
-			}
 		}
-	}
-
-	@include mixins.media-mobile {
-		width: 100%;
 	}
 }
 
@@ -87,13 +79,20 @@
 	@for $i from 0 through 12 {
 		$classes: if(
 			$i == 0,
-			'.is-#{$i}',
-			'#{$classes}, .is-#{$i}'
+			'.col-#{$i}',
+			'#{$classes}, .col-#{$i}'
 		);
 	}
-
 	#{$classes} {
 		flex: none;
 		width: 100%;
+	}
+}
+
+@mixin mobile {
+	@include mixins.media-mobile {
+		@include container-responsive;
+		@include row-responsive;
+		@include col-responsive;
 	}
 }
