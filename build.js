@@ -8,21 +8,21 @@ const __dirname = dirname(__filename);
 
 // Define os arquivos SASS que serão compilados
 // const sassFiles = [
-// 	"alignment.scss", 
-// 	"border.scss", 
-// 	"flexbox.scss", 
-// 	"form.scss", 
-// 	"gap.scss", 
-// 	"grid.scss", 
-// 	"helper.scss", 
-// 	"layout.scss", 
-// 	"main.scss", 
-// 	"position.scss", 
-// 	"reset.scss", 
-// 	"spacing.scss", 
-// 	"transition.scss", 
+// 	"alignment.scss",
+// 	"border.scss",
+// 	"flexbox.scss",
+// 	"form.scss",
+// 	"gap.scss",
+// 	"grid.scss",
+// 	"helper.scss",
+// 	"layout.scss",
+// 	"main.scss",
+// 	"position.scss",
+// 	"reset.scss",
+// 	"spacing.scss",
+// 	"transition.scss",
 // 	"typography.scss"];
-const sassFiles = ["main.scss", "layout.scss"];
+const sassFiles = ["main.scss", "position.scss"];
 
 const outputDir = join(__dirname, "dist");
 

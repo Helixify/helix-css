@@ -1,5 +1,4 @@
 @use '../../utilities/prefix' as prefix;
-@use '../../abstracts/mixins' as mixins;
 @use 'mixins' as m;
 
 @include prefix.prefix('container') {

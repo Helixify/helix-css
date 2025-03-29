@@ -2,6 +2,4 @@
   Helix CSS
   Module: Position
 */
-body {
-	content: 'position';
-}
+@use 'components/position';
