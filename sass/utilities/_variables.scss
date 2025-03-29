@@ -1,14 +1,17 @@
 @use '../abstracts/mixins' as mixins;
-@use '../components/typography/variables' as typography;
 @use '../components/border/variables' as border;
 @use '../components/form/variables' as form;
 @use '../components/gap/variables' as gap;
 @use '../components/layout/variables' as layout;
 @use '../components/transition/variables' as transition;
+@use '../components/typography/variables' as typography;
 
 :root {
 	@include mixins.var-size;
+	@include border.variables;
+	@include form.variables;
+	@include gap.variables;
+	@include layout.variables;
 	@include transition.variables;
-	// @include gap.variables;
-	// @include layout.variables;
+	@include typography.variables;
 }
