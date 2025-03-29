@@ -22,7 +22,7 @@ const __dirname = dirname(__filename);
 // 	"spacing.scss",
 // 	"transition.scss",
 // 	"typography.scss"];
-const sassFiles = ["main.scss", "spacing.scss"];
+const sassFiles = ["main.scss", "transition.scss"];
 
 const outputDir = join(__dirname, "dist");
 

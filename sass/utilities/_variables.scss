@@ -4,9 +4,11 @@
 @use '../components/form/variables' as form;
 @use '../components/gap/variables' as gap;
 @use '../components/layout/variables' as layout;
+@use '../components/transition/variables' as transition;
 
 :root {
 	@include mixins.var-size;
+	@include transition.variables;
 	// @include gap.variables;
 	// @include layout.variables;
 }
