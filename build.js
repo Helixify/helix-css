@@ -129,54 +129,35 @@ const compileModuleSass = async (fileName) => {
 	const filePath = join(__dirname, "sass", fileName);
 	const fileNameWithoutExt = fileName.replace(".scss", "");
 
-	// Define os caminhos de saída na pasta modules
-	const expandedOutputPath = join(
+	// Define o caminho de saída na pasta modules (apenas versão normal)
+	const outputPath = join(
 		modulesDir,
 		`${fileNameWithoutExt}.css`,
-	);
-	const minifiedOutputPath = join(
-		modulesDir,
-		`${fileNameWithoutExt}.min.css`,
 	);
 
 	try {
 		// Compila versão expanded
-		const expandedResult = sass.compile(filePath, {
+		const result = sass.compile(filePath, {
 			style: "expanded",
 			sourceMap: true,
 		});
 
-		// Compila versão compressed
-		const compressedResult = sass.compile(filePath, {
-			style: "compressed",
-			sourceMap: false,
-		});
+		// Salva o arquivo
+		await ensureDirectoryExistence(outputPath);
+		await fs.promises.writeFile(outputPath, result.css, "utf8");
 
-		// Salva versão expanded
-		await ensureDirectoryExistence(expandedOutputPath);
-		await fs.promises.writeFile(expandedOutputPath, expandedResult.css, "utf8");
-
-		if (expandedResult.sourceMap) {
+		if (result.sourceMap) {
 			await fs.promises.writeFile(
-				`${expandedOutputPath}.map`,
-				JSON.stringify(expandedResult.sourceMap),
+				`${outputPath}.map`,
+				JSON.stringify(result.sourceMap),
 				"utf8",
 			);
 		}
 
-		// Salva versão compressed
-		await ensureDirectoryExistence(minifiedOutputPath);
-		await fs.promises.writeFile(
-			minifiedOutputPath,
-			compressedResult.css,
-			"utf8",
-		);
-
 		log(
 			"compile",
 			`Compiled module \`${fileName}\` to:
-      - \`${expandedOutputPath}\`
-      - \`${minifiedOutputPath}\``,
+      - \`${outputPath}\``,
 		);
 	} catch (error) {
 		log("error", `Error compiling module \`${fileName}\`: ${error}`);
