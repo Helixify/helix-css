@@ -7,7 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Define os arquivos SASS que serão compilados
-const sassFiles = [
+// Separando o arquivo principal dos módulos
+const mainFile = "main.scss";
+const moduleFiles = [
 	"alignment.scss",
 	"border.scss",
 	"flexbox.scss",
@@ -16,7 +18,6 @@ const sassFiles = [
 	"grid.scss",
 	"helper.scss",
 	"layout.scss",
-	"main.scss",
 	"position.scss",
 	"reset.scss",
 	"spacing.scss",
@@ -25,6 +26,7 @@ const sassFiles = [
 ];
 
 const outputDir = join(__dirname, "dist");
+const modulesDir = join(outputDir, "module");
 
 const log = async (type, message) => {
 	let typeText;
@@ -63,20 +65,18 @@ const ensureDirectoryExistence = async (filePath) => {
 	}
 };
 
-// Compila um arquivo SASS
-const compileSass = async (fileName) => {
-	const filePath = join(__dirname, "sass", fileName);
-	const fileNameWithoutExt = fileName.replace(".scss", "");
+// Compila o arquivo principal (main.scss)
+const compileMainSass = async () => {
+	const filePath = join(__dirname, "sass", mainFile);
+	const fileNameWithoutExt = mainFile.replace(".scss", "");
 
-	// Define os caminhos de saída para versões expanded e compressed
+	// Define os caminhos de saída diretamente no diretório dist
 	const expandedOutputPath = join(
 		outputDir,
-		"expanded",
 		`${fileNameWithoutExt}.css`,
 	);
 	const minifiedOutputPath = join(
 		outputDir,
-		"compressed",
 		`${fileNameWithoutExt}.min.css`,
 	);
 
@@ -115,19 +115,83 @@ const compileSass = async (fileName) => {
 
 		log(
 			"compile",
-			`Compiled \`${fileName}\` to:
+			`Compiled \`${mainFile}\` to:
       - \`${expandedOutputPath}\`
       - \`${minifiedOutputPath}\``,
 		);
 	} catch (error) {
-		log("error", `Error compiling \`${fileName}\`: ${error}`);
+		log("error", `Error compiling \`${mainFile}\`: ${error}`);
+	}
+};
+
+// Compila um arquivo módulo SASS
+const compileModuleSass = async (fileName) => {
+	const filePath = join(__dirname, "sass", fileName);
+	const fileNameWithoutExt = fileName.replace(".scss", "");
+
+	// Define os caminhos de saída na pasta modules
+	const expandedOutputPath = join(
+		modulesDir,
+		`${fileNameWithoutExt}.css`,
+	);
+	const minifiedOutputPath = join(
+		modulesDir,
+		`${fileNameWithoutExt}.min.css`,
+	);
+
+	try {
+		// Compila versão expanded
+		const expandedResult = sass.compile(filePath, {
+			style: "expanded",
+			sourceMap: true,
+		});
+
+		// Compila versão compressed
+		const compressedResult = sass.compile(filePath, {
+			style: "compressed",
+			sourceMap: false,
+		});
+
+		// Salva versão expanded
+		await ensureDirectoryExistence(expandedOutputPath);
+		await fs.promises.writeFile(expandedOutputPath, expandedResult.css, "utf8");
+
+		if (expandedResult.sourceMap) {
+			await fs.promises.writeFile(
+				`${expandedOutputPath}.map`,
+				JSON.stringify(expandedResult.sourceMap),
+				"utf8",
+			);
+		}
+
+		// Salva versão compressed
+		await ensureDirectoryExistence(minifiedOutputPath);
+		await fs.promises.writeFile(
+			minifiedOutputPath,
+			compressedResult.css,
+			"utf8",
+		);
+
+		log(
+			"compile",
+			`Compiled module \`${fileName}\` to:
+      - \`${expandedOutputPath}\`
+      - \`${minifiedOutputPath}\``,
+		);
+	} catch (error) {
+		log("error", `Error compiling module \`${fileName}\`: ${error}`);
 	}
 };
 
 // Compila todos os arquivos SASS
 const compileAll = async () => {
 	try {
-		await Promise.all(sassFiles.map((file) => compileSass(file)));
+		// Primeiro compila o arquivo principal
+		await compileMainSass();
+		
+		// Depois compila todos os módulos
+		await Promise.all(moduleFiles.map((file) => compileModuleSass(file)));
+		
 		log("success", "All SASS files compiled successfully");
 	} catch (error) {
 		log("error", `Error in compilation process: ${error}`);
@@ -144,9 +208,13 @@ const watchFiles = () => {
 		if (filename?.endsWith(".scss")) {
 			log("info", `File \`${filename}\` changed`);
 
-			// Se o arquivo alterado está na nossa lista, compila ele
-			if (sassFiles.includes(filename)) {
-				await compileSass(filename);
+			// Se for o arquivo main.scss
+			if (filename === mainFile) {
+				await compileMainSass();
+			}
+			// Se o arquivo alterado está na nossa lista de módulos
+			else if (moduleFiles.includes(filename)) {
+				await compileModuleSass(filename);
 			}
 			// Se for um arquivo parcial (_filename.scss), recompila tudo
 			else if (filename.startsWith("_")) {
