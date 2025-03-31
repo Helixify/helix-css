@@ -37,7 +37,6 @@ responsive and visually appealing layouts with ease.
 
 ## Get started
 
-
 You can also install the HelixCSS library via NPM:
 
 ```bash

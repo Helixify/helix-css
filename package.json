@@ -9,7 +9,7 @@
 	"homepage": "https://www.helixify.dev/helix-css",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Helixify/HelixCSS.git"
+		"url": "git+https://github.com/Helixify/helix-css.git"
 	},
 	"files": [
 		"dist/compressed/main.css"

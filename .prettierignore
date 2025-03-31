@@ -1,3 +1,5 @@
-dist/compressed/
+dist/**/**
 dist/**/*.map
 node_modules/
+pnpm-lock.yaml
+package-lock.json

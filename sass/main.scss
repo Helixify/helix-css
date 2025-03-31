@@ -3,18 +3,18 @@
 */
 @use 'utilities/variables' as *;
 
-@use 'components/helper/styles' as *;
-@use 'components/alignment/styles' as *;
-@use 'components/border/styles' as *;
-@use 'components/flexbox/styles' as *;
-@use 'components/form/styles' as *;
-@use 'components/gap/styles' as *;
-@use 'components/grid/styles' as *;
-@use 'components/layout/styles' as *;
-@use 'components/position/styles' as *;
-@use 'components/reset/styles' as *;
-@use 'components/spacing/styles' as *;
-@use 'components/transition/styles' as *;
-@use 'components/typography/styles' as *;
+@use 'modules/helper/styles' as *;
+@use 'modules/alignment/styles' as *;
+@use 'modules/border/styles' as *;
+@use 'modules/flexbox/styles' as *;
+@use 'modules/form/styles' as *;
+@use 'modules/gap/styles' as *;
+@use 'modules/grid/styles' as *;
+@use 'modules/layout/styles' as *;
+@use 'modules/position/styles' as *;
+@use 'modules/reset/styles' as *;
+@use 'modules/spacing/styles' as *;
+@use 'modules/transition/styles' as *;
+@use 'modules/typography/styles' as *;
 
 @use 'utilities';
