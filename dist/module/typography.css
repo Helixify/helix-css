@@ -3,10 +3,10 @@
   Module: Typography
 */
 :root {
-  --font-family: ui-sans-serif, -apple-system,
-  	BlinkMacSystemFont, "Segoe UI", Helvetica,
-  	"Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
-  	"Segoe UI Symbol";
+  --font-family:
+  	ui-sans-serif, -apple-system, BlinkMacSystemFont,
+  	"Segoe UI", Helvetica, "Apple Color Emoji", Arial,
+  	sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-heading: var(--font-family);
   --font-family-text: var(--font-family);
   --font-family-code: var(--font-family);
@@ -74,22 +74,39 @@ h6,
   color: var(--heading-color);
 }
 
-.h1, .heading-1 {
+h1,
+.h1,
+.heading-1 {
   font-size: var(--heading-1);
 }
-.h2, .heading-2 {
+
+h2,
+.h2,
+.heading-2 {
   font-size: var(--heading-2);
 }
-.h3, .heading-3 {
+
+h3,
+.h3,
+.heading-3 {
   font-size: var(--heading-3);
 }
-.h4, .heading-4 {
+
+h4,
+.h4,
+.heading-4 {
   font-size: var(--heading-4);
 }
-.h5, .heading-5 {
+
+h5,
+.h5,
+.heading-5 {
   font-size: var(--heading-5);
 }
-.h6, .heading-6 {
+
+h6,
+.h6,
+.heading-6 {
   font-size: var(--heading-6);
 }
 

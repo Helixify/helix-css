@@ -22,6 +22,18 @@
 
 @mixin heading {
 	@for $i from 1 through 6 {
+		@at-root {
+			h#{$i},
+			#{&}#{$i},
+			#{&}eading-#{$i} {
+				font-size: var(--heading-#{$i});
+			}
+		}
+	}
+}
+
+@mixin heading-responsive {
+	@for $i from 1 through 6 {
 		&#{$i},
 		&eading-#{$i} {
 			font-size: var(--heading-#{$i});
@@ -155,7 +167,7 @@
 		$breakpoint,
 		'h'
 	) {
-		@include heading;
+		@include heading-responsive;
 	}
 	@include abstract.responsive-class(
 		false,
