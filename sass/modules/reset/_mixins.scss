@@ -1,5 +1,5 @@
 @mixin reset {
-	:is(*, *::before, *::after) {
+	:where(*, *::before, *::after) {
 		box-sizing: border-box;
 	}
 
@@ -7,22 +7,22 @@
 		margin: 0;
 	}
 
-	:is(html, body) {
+	:where(html, body) {
 		padding: 0;
 		word-break: break-word;
 	}
 
-	:is(main, section) {
+	:where(main, section) {
 		width: 100%;
 	}
 
-	:is(figure, article) {
+	:where(figure, article) {
 		margin: 0;
 		padding: 0;
 		border-style: none;
 	}
 
-	:is(img, picture, video, canvas, svg) {
+	:where(img, picture, video, canvas, svg) {
 		display: block;
 		max-width: 100%;
 		max-height: 100%;
@@ -33,11 +33,11 @@
 		overflow: auto;
 	}
 
-	:is(p, h1, h2, h3, h4, h5, h6) {
+	:where(p, h1, h2, h3, h4, h5, h6) {
 		overflow-wrap: break-word;
 	}
 
-	:is(#root, #__next) {
+	:where(#root, #__next) {
 		isolation: isolate;
 	}
 

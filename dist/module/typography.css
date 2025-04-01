@@ -50,7 +50,7 @@ small {
   font-size: var(--small-size);
 }
 
-h1,
+:where(h1,
 .h1,
 .heading-1,
 h2,
@@ -67,7 +67,7 @@ h5,
 .heading-5,
 h6,
 .h6,
-.heading-6 {
+.heading-6) {
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-heading);
   line-height: var(--heading-line-height);

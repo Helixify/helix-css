@@ -83,7 +83,7 @@
 			'#{$classes}, .col-#{$i}'
 		);
 	}
-	#{$classes} {
+	:where(#{$classes}) {
 		flex: none;
 		width: 100%;
 	}
