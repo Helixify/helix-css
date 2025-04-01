@@ -32,14 +32,14 @@
   --code-color: initial;
 }
 
-:is(body) {
+body {
   font-family: var(--font-family-text);
   font-weight: var(--font-weight-text);
   color: var(--text-color);
   line-height: var(--font-line-height);
 }
 
-:is(code) {
+code {
   font-family: var(--font-family-code);
   font-weight: var(--font-weight-code);
   color: var(--code-color);
