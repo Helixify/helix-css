@@ -1,6 +1,6 @@
 @use 'mixin' as m;
 
-:where(button, input, textarea, select, a.button),
+:where(button, input, textarea, select),
 input[type='file']::file-selector-button {
 	@include m.form;
 }
@@ -29,22 +29,18 @@ input[type='file'] {
 	button,
 	input[type='button'],
 	input[type='submit'],
-	input[type='reset'],
-	a.button
+	input[type='reset']
 ),
 input[type='file']::file-selector-button {
 	@include m.button;
 }
 
-:where(
-	button,
-	input[type='button'],
-	input[type='submit'],
-	input[type='reset'],
-	input[type='checkbox'],
-	input[type='radio'],
-	a.button
-) {
+a {
+	@include m.link;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
 	@include m.checkbox-radio;
 }
 

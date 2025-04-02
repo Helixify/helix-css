@@ -20,6 +20,7 @@
 
 @mixin input-text {
 	cursor: text;
+	background-color: transparent;
 	&:where(:not(:active)):focus-visible {
 		border-color: var(--form-highlight);
 		outline: {
@@ -47,6 +48,14 @@
 			color: var(--form-highlight-active);
 			offset: 0px;
 		}
+	}
+}
+
+@mixin link {
+	line-height: 100%;
+	color: var(--form-highlight);
+	&:active {
+		color: var(--form-link-active);
 	}
 }
 
