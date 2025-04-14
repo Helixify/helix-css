@@ -12,21 +12,20 @@
 		"url": "git+https://github.com/Helixify/helix-css.git"
 	},
 	"files": [
-		"dist/compressed/main.css"
+		"dist/main.min.css"
 	],
 	"license": "MIT",
 	"scripts": {
-		"build": "node build.js",
-		"watch": "node build.js --watch",
 		"dev": "vite",
+		"build": "vite build",
 		"format": "prettier --write .",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"chokidar": "^4.0.1",
+		"clean-css": "^5.3.3",
 		"prettier": "^3.3.3",
 		"sass": "^1.79.4",
-		"vite": "^4.5.5"
+		"vite": "^6.2.6"
 	},
 	"keywords": [
 		"helix",
