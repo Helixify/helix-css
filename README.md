@@ -48,15 +48,15 @@ Or you can embed the CDN code in your file:
 **HTML**
 
 ```html
-<!-- Compressed - 94KB -->
+<!-- Compressed - 101KB -->
 <link
 	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/compressed/main.css" />
+	href="https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/main.min.css" />
 
-<!-- Expanded - 126KB -->
+<!-- Expanded - 135KB -->
 <link
 	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/expanded/main.css" />
+	href="https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/main.css" />
 ```
 
 <br/>
@@ -64,11 +64,23 @@ Or you can embed the CDN code in your file:
 **CSS**
 
 ```css
-/* Compressed - 94KB */
-@import url('https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/compressed/main.css');
+/* Compressed - 101KB */
+@import url('https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/main.min.css');
 
-/* Expanded - 126KB */
-@import url('https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/expanded/main.css');
+/* Expanded - 135KB */
+@import url('https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/main.css');
+```
+
+**Modules**
+
+You can also install the separate modules in your project
+
+```bash
+/* Compressed - 1.7KB */
+https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/module/layout.css
+
+/* Expanded - 1.34KB */
+https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/module/layout.min.css
 ```
 
 <br/>
