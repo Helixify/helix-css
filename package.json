@@ -2,7 +2,7 @@
 	"name": "helix-css",
 	"private": false,
 	"type": "module",
-	"main": "dist/compressed/main.css",
+	"main": "index.js",
 	"version": "0.7.1",
 	"description": "A framework css for dev",
 	"author": "André Luiz",
