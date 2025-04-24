@@ -1,4 +1,5 @@
-bun.lockb
-dist/**/*.map
 node_modules
+dist/**/*.map
+bun.lockb
 package-lock.json
+pnpm-lock.yaml
