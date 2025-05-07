@@ -1,4 +1,4 @@
-<img src='./public/doc/cover.png' title='HelixCSS' alt='Logo HelixCSS' />
+![Logo HelixCSS](./public/doc/cover.png)
 <div align="center">
   <h3>A modular CSS framework</h3>
   	<span>
