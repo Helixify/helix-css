@@ -1,11 +1,7 @@
-![Logo HelixCSS](./public/doc/cover.png)
 <div align="center">
-  <h3>A modular CSS framework</h3>
-  	<span>
-		<span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-		<a href="#get-started">Get started</a>
-		<span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-	</span>
+	
+![Logo HelixCSS](./public/doc/cover.png)
+
 </div>
 
 <br/>
@@ -13,7 +9,7 @@
 
 ## About
 
-HelixCSS is a lightweight CSS framework designed to
+HelixCSS\ is a lightweight CSS framework designed to
 streamline web development and provide essential styling
 utilities for building modern web projects. With a focus on
 simplicity, performance, and modularity, HelixCSS offers a
