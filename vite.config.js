@@ -36,6 +36,12 @@ const handleError = (phase, error) => {
 
 export default defineConfig({
 	publicDir: false,
+	
+	server: {
+		fs: {
+			deny: ['.env', 'secret-folder', 'config.js'],
+		},
+	},
 
 	css: {
 		preprocessorOptions: {
