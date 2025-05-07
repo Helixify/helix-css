@@ -48,12 +48,12 @@ Or you can embed the CDN code in your file:
 **HTML**
 
 ```html
-<!-- Compressed - 101KB -->
+<!-- Compressed -->
 <link
 	rel="stylesheet"
 	href="https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/main.min.css" />
 
-<!-- Expanded - 135KB -->
+<!-- Expanded -->
 <link
 	rel="stylesheet"
 	href="https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/main.css" />
@@ -64,10 +64,10 @@ Or you can embed the CDN code in your file:
 **CSS**
 
 ```css
-/* Compressed - 101KB */
+/* Compressed */
 @import url('https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/main.min.css');
 
-/* Expanded - 135KB */
+/* Expanded */
 @import url('https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/main.css');
 ```
 
@@ -76,10 +76,10 @@ Or you can embed the CDN code in your file:
 You can also install the separate modules in your project
 
 ```bash
-/* Compressed - 1.7KB */
+/* Compressed */
 https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/module/layout.css
 
-/* Expanded - 1.34KB */
+/* Expanded */
 https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@latest/dist/module/layout.min.css
 ```
 
