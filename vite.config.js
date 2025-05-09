@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import sass from 'sass'
+import * as sass from 'sass'
 import fs from 'fs/promises'
 
 // list all Helix CSS modules
