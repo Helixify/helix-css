@@ -40,7 +40,6 @@
 		inline-block,
 		none
 	);
-
 	@include mixins.display-flex;
 	@include mixins.display-grid;
 }
@@ -163,7 +162,7 @@
 	@include mixins.responsive-class(
 		false,
 		$breakpoint,
-		'display'
+		'ds'
 	) {
 		@include display;
 	}

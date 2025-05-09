@@ -234,48 +234,48 @@
   .\32 xl\:cursor-text {
     cursor: text;
   }
-  .\32 xl\:display-block {
+  .\32 xl\:ds-block {
     display: block;
   }
-  .\32 xl\:display-inline {
+  .\32 xl\:ds-inline {
     display: inline;
   }
-  .\32 xl\:display-inline-block {
+  .\32 xl\:ds-inline-block {
     display: inline-block;
   }
-  .\32 xl\:display-none {
+  .\32 xl\:ds-none {
     display: none;
   }
-  .\32 xl\:display-flex {
+  .\32 xl\:ds-flex {
     display: flex;
   }
-  .\32 xl\:display-flex-start {
+  .\32 xl\:ds-flex-start {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .\32 xl\:display-flex-center {
+  .\32 xl\:ds-flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .\32 xl\:display-flex-end {
+  .\32 xl\:ds-flex-end {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
   }
-  .\32 xl\:display-inline-flex {
+  .\32 xl\:ds-inline-flex {
     display: inline-flex;
   }
-  .\32 xl\:display-inline-flex-center {
+  .\32 xl\:ds-inline-flex-center {
     display: inline-flex;
     justify-content: center;
     align-items: center;
   }
-  .\32 xl\:display-grid {
+  .\32 xl\:ds-grid {
     display: grid;
   }
-  .\32 xl\:display-inline-grid {
+  .\32 xl\:ds-inline-grid {
     display: inline-grid;
   }
   .\32 xl\:list-style-none {
@@ -422,48 +422,48 @@
   .xl\:cursor-text {
     cursor: text;
   }
-  .xl\:display-block {
+  .xl\:ds-block {
     display: block;
   }
-  .xl\:display-inline {
+  .xl\:ds-inline {
     display: inline;
   }
-  .xl\:display-inline-block {
+  .xl\:ds-inline-block {
     display: inline-block;
   }
-  .xl\:display-none {
+  .xl\:ds-none {
     display: none;
   }
-  .xl\:display-flex {
+  .xl\:ds-flex {
     display: flex;
   }
-  .xl\:display-flex-start {
+  .xl\:ds-flex-start {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .xl\:display-flex-center {
+  .xl\:ds-flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .xl\:display-flex-end {
+  .xl\:ds-flex-end {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
   }
-  .xl\:display-inline-flex {
+  .xl\:ds-inline-flex {
     display: inline-flex;
   }
-  .xl\:display-inline-flex-center {
+  .xl\:ds-inline-flex-center {
     display: inline-flex;
     justify-content: center;
     align-items: center;
   }
-  .xl\:display-grid {
+  .xl\:ds-grid {
     display: grid;
   }
-  .xl\:display-inline-grid {
+  .xl\:ds-inline-grid {
     display: inline-grid;
   }
   .xl\:list-style-none {
@@ -610,48 +610,48 @@
   .lg\:cursor-text {
     cursor: text;
   }
-  .lg\:display-block {
+  .lg\:ds-block {
     display: block;
   }
-  .lg\:display-inline {
+  .lg\:ds-inline {
     display: inline;
   }
-  .lg\:display-inline-block {
+  .lg\:ds-inline-block {
     display: inline-block;
   }
-  .lg\:display-none {
+  .lg\:ds-none {
     display: none;
   }
-  .lg\:display-flex {
+  .lg\:ds-flex {
     display: flex;
   }
-  .lg\:display-flex-start {
+  .lg\:ds-flex-start {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .lg\:display-flex-center {
+  .lg\:ds-flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .lg\:display-flex-end {
+  .lg\:ds-flex-end {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
   }
-  .lg\:display-inline-flex {
+  .lg\:ds-inline-flex {
     display: inline-flex;
   }
-  .lg\:display-inline-flex-center {
+  .lg\:ds-inline-flex-center {
     display: inline-flex;
     justify-content: center;
     align-items: center;
   }
-  .lg\:display-grid {
+  .lg\:ds-grid {
     display: grid;
   }
-  .lg\:display-inline-grid {
+  .lg\:ds-inline-grid {
     display: inline-grid;
   }
   .lg\:list-style-none {
@@ -798,48 +798,48 @@
   .md\:cursor-text {
     cursor: text;
   }
-  .md\:display-block {
+  .md\:ds-block {
     display: block;
   }
-  .md\:display-inline {
+  .md\:ds-inline {
     display: inline;
   }
-  .md\:display-inline-block {
+  .md\:ds-inline-block {
     display: inline-block;
   }
-  .md\:display-none {
+  .md\:ds-none {
     display: none;
   }
-  .md\:display-flex {
+  .md\:ds-flex {
     display: flex;
   }
-  .md\:display-flex-start {
+  .md\:ds-flex-start {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .md\:display-flex-center {
+  .md\:ds-flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .md\:display-flex-end {
+  .md\:ds-flex-end {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
   }
-  .md\:display-inline-flex {
+  .md\:ds-inline-flex {
     display: inline-flex;
   }
-  .md\:display-inline-flex-center {
+  .md\:ds-inline-flex-center {
     display: inline-flex;
     justify-content: center;
     align-items: center;
   }
-  .md\:display-grid {
+  .md\:ds-grid {
     display: grid;
   }
-  .md\:display-inline-grid {
+  .md\:ds-inline-grid {
     display: inline-grid;
   }
   .md\:list-style-none {
@@ -986,48 +986,48 @@
   .sm\:cursor-text {
     cursor: text;
   }
-  .sm\:display-block {
+  .sm\:ds-block {
     display: block;
   }
-  .sm\:display-inline {
+  .sm\:ds-inline {
     display: inline;
   }
-  .sm\:display-inline-block {
+  .sm\:ds-inline-block {
     display: inline-block;
   }
-  .sm\:display-none {
+  .sm\:ds-none {
     display: none;
   }
-  .sm\:display-flex {
+  .sm\:ds-flex {
     display: flex;
   }
-  .sm\:display-flex-start {
+  .sm\:ds-flex-start {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .sm\:display-flex-center {
+  .sm\:ds-flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .sm\:display-flex-end {
+  .sm\:ds-flex-end {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
   }
-  .sm\:display-inline-flex {
+  .sm\:ds-inline-flex {
     display: inline-flex;
   }
-  .sm\:display-inline-flex-center {
+  .sm\:ds-inline-flex-center {
     display: inline-flex;
     justify-content: center;
     align-items: center;
   }
-  .sm\:display-grid {
+  .sm\:ds-grid {
     display: grid;
   }
-  .sm\:display-inline-grid {
+  .sm\:ds-inline-grid {
     display: inline-grid;
   }
   .sm\:list-style-none {
