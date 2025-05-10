@@ -1,4 +1,4 @@
-$prefix: 'hx';
+$prefix: '';
 
 @mixin prefix($class) {
 	@if $prefix != '' {
