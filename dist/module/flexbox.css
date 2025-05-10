@@ -2,33 +2,6 @@
   Helix CSS
   Module: Flexbox
 */
-.ds-flex {
-  display: flex;
-}
-.ds-flex-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.ds-flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.ds-flex-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.ds-inline-flex {
-  display: inline-flex;
-}
-.ds-inline-flex-center {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .flow-row-wr {
   flex-flow: row wrap;
 }
@@ -54,7 +27,7 @@
   flex-flow: column-reverse nowrap;
 }
 
-.flex {
+.flex-bgs {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
@@ -111,7 +84,7 @@
   .\32 xl\:flow-col-rev-nw {
     flex-flow: column-reverse nowrap;
   }
-  .\32 xl\:flex {
+  .\32 xl\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
@@ -168,7 +141,7 @@
   .xl\:flow-col-rev-nw {
     flex-flow: column-reverse nowrap;
   }
-  .xl\:flex {
+  .xl\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
@@ -225,7 +198,7 @@
   .lg\:flow-col-rev-nw {
     flex-flow: column-reverse nowrap;
   }
-  .lg\:flex {
+  .lg\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
@@ -282,7 +255,7 @@
   .md\:flow-col-rev-nw {
     flex-flow: column-reverse nowrap;
   }
-  .md\:flex {
+  .md\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
@@ -339,7 +312,7 @@
   .sm\:flow-col-rev-nw {
     flex-flow: column-reverse nowrap;
   }
-  .sm\:flex {
+  .sm\:flex-bgs {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;

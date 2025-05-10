@@ -4,7 +4,6 @@
 @use 'utilities/root' as *;
 
 @use 'modules/reset/styles' as *;
-@use 'modules/helper/styles' as *;
 @use 'modules/layout/styles' as *;
 @use 'modules/typography/styles' as *;
 @use 'modules/position/styles' as *;
@@ -16,5 +15,6 @@
 @use 'modules/border/styles' as *;
 @use 'modules/form/styles' as *;
 @use 'modules/transition/styles' as *;
+@use 'modules/helper/styles' as *;
 
 @use 'utilities';
