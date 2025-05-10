@@ -1,6 +1,3 @@
-//#region Breakpoint
-// Responsável por gerar um objeto com todos os valores de breakpoint.
-
 $breakpoints: (
 	'2xl': 96rem,
 	'xl': 80rem,
@@ -8,7 +5,6 @@ $breakpoints: (
 	'md': 48rem,
 	'sm': 40rem,
 );
-//#endregion
 
 $sizes-value: (
 	'0': 0rem,
@@ -50,9 +46,6 @@ $sizes-name: (
 	'16': '9xl',
 );
 
-//#region Sizes
-// Responsável por gerar um objeto com todos os valores de tamanho.
-
 $sizes: (
 	'5xs': var(--0),
 	'4xs': var(--1),
@@ -72,4 +65,3 @@ $sizes: (
 	'8xl': var(--15),
 	'9xl': var(--16),
 );
-//#endregion

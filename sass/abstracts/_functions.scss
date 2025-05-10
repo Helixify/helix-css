@@ -1,11 +1,15 @@
 @use 'sass:map';
 @use 'variables' as v;
 
-//#region Get Breakpoint
-// Função responsável por mapear todo o array de objetos de breakpoint.
-
+/// Function responsible for returning the value of a breakpoint
+///
+/// @require {variable} breakpoints - Variable with all breakpoints
+///
+/// @param {variable} key - Key to access the breakpoint value
+///
+/// @example scss - #{get-breakpoint('sm'))}
+///
+/// @output Value of a breakpoint
 @function get-breakpoint($key) {
 	@return map.get(v.$breakpoints, $key);
 }
-
-//#endregion
