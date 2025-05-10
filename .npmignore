@@ -1,11 +1,10 @@
 node_modules
 dist/module/*
-dist/main.css
 public/*
-.prettierignore
-.prettierrc
 bun.lockb
 pnpm-lock.yaml
 package-lock.json
 !dist/compressed/main.css
+!sass/*
 !index.js
+!vite.config.js
