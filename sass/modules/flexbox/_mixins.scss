@@ -52,7 +52,7 @@
 	@include abstract.responsive-class(
 		false,
 		$breakpoint,
-		'flex'
+		'flex-bgs'
 	) {
 		@include flex-bgs;
 	}
