@@ -1,0 +1,40 @@
+@use '../../abstracts/mixins' as mixin;
+
+@mixin spacing($property) {
+	@include mixin.class-size-range($property);
+	&t {
+		@include mixin.class-size-range(#{$property + '-top'});
+	}
+	&r {
+		@include mixin.class-size-range(
+			#{$property + '-right'}
+		);
+	}
+	&b {
+		@include mixin.class-size-range(
+			#{$property + '-bottom'}
+		);
+	}
+	&l {
+		@include mixin.class-size-range(#{$property + '-left'});
+	}
+	&-block {
+		@include mixin.class-size-range(
+			#{$property + '-block'}
+		);
+	}
+	&-inline {
+		@include mixin.class-size-range(
+			#{$property + '-inline'}
+		);
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(false, $breakpoint, 'p') {
+		@include spacing('padding');
+	}
+	@include mixin.responsive-class(false, $breakpoint, 'm') {
+		@include spacing('margin');
+	}
+}

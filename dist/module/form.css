@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/*  
+  Helix CSS
+  Module: Form
+*/
+:root {
+  --form-highlight: hsl(220, 90%, 60%);
+  --form-highlight-active: hsla(220, 90%, 60%, 0.32);
+  --form-link-active: hsl(220, 90%, 40%);
+  --form-border-color: hsl(0, 0%, 40%);
+  --form-border-width: 1px;
+  --form-outline-width: 2px;
+}
+
+:where(button, input, textarea, select),
+input[type=file]::file-selector-button {
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+  border-style: solid;
+  border-width: var(--form-border-width);
+  border-color: var(--form-border-color);
+  border-radius: 0.25rem;
+  outline-color: transparent;
+  outline-width: var(--form-border-width);
+  outline-style: solid;
+  outline-offset: -0.0625rem;
+  line-height: 1;
+}
+
+:where(input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=search],
+input[type=number],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+select,
+textarea) {
+  cursor: text;
+  background-color: transparent;
+}
+:where(input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=search],
+input[type=number],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+select,
+textarea):where(:not(:active)):focus-visible {
+  border-color: var(--form-highlight);
+  outline-width: var(--form-outline-width);
+  outline-color: var(--form-highlight-active);
+  outline-offset: 0px;
+}
+
+input[type=file] {
+  padding: var(--form-outline-width);
+  border: none;
+  cursor: pointer;
+}
+
+:where(button,
+input[type=button],
+input[type=submit],
+input[type=reset]),
+input[type=file]::file-selector-button {
+  cursor: pointer;
+  line-height: 1.13;
+}
+:where(button,
+input[type=button],
+input[type=submit],
+input[type=reset]):where(:not(:active)):hover,
+input[type=file]::file-selector-button:where(:not(:active)):hover {
+  border-color: var(--form-highlight);
+  outline-width: var(--form-outline-width);
+  outline-color: var(--form-highlight-active);
+  outline-offset: 0px;
+}
+
+a {
+  line-height: 100%;
+  color: var(--form-highlight);
+}
+a:active {
+  color: var(--form-link-active);
+}
+
+input[type=checkbox],
+input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-color: var(--form-border-color);
+}
+input[type=checkbox]:focus,
+input[type=radio]:focus {
+  border-color: var(--form-highlight);
+  outline-width: var(--form-outline-width);
+  outline-color: var(--form-highlight-active);
+  outline-offset: 0px;
+}
+input[type=checkbox]:checked,
+input[type=radio]:checked {
+  border-color: var(--form-highlight);
+}
+
+input[type=checkbox] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+input[type=checkbox]:checked {
+  background-color: var(--form-highlight);
+}
+input[type=checkbox]:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 1em;
+  position: relative;
+}
+
+input[type=radio] {
+  border-radius: 50%;
+  position: relative;
+}
+input[type=radio]:checked::after {
+  content: "";
+  position: absolute;
+  inset: 0.125rem;
+  border-radius: 50%;
+  background-color: var(--form-highlight);
+}

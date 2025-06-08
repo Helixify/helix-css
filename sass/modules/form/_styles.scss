@@ -1,0 +1,53 @@
+@use 'mixin' as m;
+
+:where(button, input, textarea, select),
+input[type='file']::file-selector-button {
+	@include m.form;
+}
+
+:where(
+	input[type='text'],
+	input[type='password'],
+	input[type='email'],
+	input[type='tel'],
+	input[type='search'],
+	input[type='number'],
+	input[type='date'],
+	input[type='datetime'],
+	input[type='datetime-local'],
+	select,
+	textarea
+) {
+	@include m.input-text;
+}
+
+input[type='file'] {
+	@include m.input-file;
+}
+
+:where(
+	button,
+	input[type='button'],
+	input[type='submit'],
+	input[type='reset']
+),
+input[type='file']::file-selector-button {
+	@include m.button;
+}
+
+a {
+	@include m.link;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	@include m.checkbox-radio;
+}
+
+input[type='checkbox'] {
+	@include m.checkbox;
+}
+
+input[type='radio'] {
+	@include m.radio;
+}

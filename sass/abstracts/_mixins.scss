@@ -1,0 +1,276 @@
+@use 'sass:map';
+
+@use 'functions' as f;
+@use '../utilities/prefix' as prefix;
+@use 'variables' as v;
+
+/// ---- ---- Variables ---- ----
+
+/// Mixin for generating CSS size variables following a progressive scale
+///
+/// @require {sizes} v.$sizes - All sizes
+///
+/// @example scss - @include var-size();
+///
+/// @output CSS size variables from 0 to 16
+@mixin var-size-generator() {
+	@each $size in v.$sizes-new {
+		$id: map.get($size, id);
+		$name: map.get($size, name);
+		$valueEM: map.get($size, valueEM);
+
+		--#{$name}: #{$valueEM}rem;
+	}
+}
+
+/// Mixin que gera variáveis com um range específico definido na hora de utilizar
+///
+/// @require {sizes} v.$sizes - All sizes
+///
+/// @param {string} property - O nome da variável que será gerada
+/// @param {string} start - O Número inicial do for
+/// @param {string} end - O Número final do for
+///
+/// @example scss - @include var-size-range('radius', 2, 10);
+///
+/// @output Uma lista de variáveis com os tamanhos pré refinidos da variável sizes
+@mixin var-size-range(
+	$internal: true,
+	$property,
+	$start: 0,
+	$end: 16
+) {
+	@if ($internal) {
+		@for $i from $start through $end {
+			$name: f.get-size-by-id($i, 'name');
+
+			--#{$property}-#{$name}: var(--#{$name});
+		}
+	} @else {
+		@for $i from $start through $end {
+			$name: f.get-size-by-id($i, 'name');
+			$valueEM: f.get-size-by-id($i, 'valueEM');
+
+			--#{$property}-#{$name}: #{$valueEM + 'rem'};
+		}
+	}
+}
+
+/// ---- ---- Classes ---- ----
+
+/// Mixin for generating classes based on a CSS property with specific values
+///
+/// @param {string} $property - CSS property to be used
+/// @param {list} $classes - List of values/classes to be generated
+///
+/// @example scss - @include property('color', 'red', 'blue', 'green');
+///
+/// @output CSS classes for the specified property with the provided values
+@mixin property($property, $classes...) {
+	@each $class in $classes {
+		&-#{$class} {
+			#{$property}: $class;
+		}
+	}
+}
+
+/// Mixin for generating classes with custom names based on a CSS property
+///
+/// @param {string} $name - Name to be used in the class
+/// @param {string} $property - CSS property to be used
+/// @param {list} $values - List of values to be generated
+///
+/// @example scss - @include property-name('size', 'width', '100px', '200px', '200px');
+///
+/// @output Custom CSS classes for the specified property
+@mixin property-name($name, $property, $values...) {
+	@each $value in $values {
+		&-#{$name}-#{$value} {
+			#{$property}: $value;
+		}
+	}
+}
+
+/// Generates utility classes based on predefined design system sizes
+///
+/// This mixin is responsible for creating a series of CSS classes that apply a specific
+/// property using CSS variables from the sizing system. Each generated class uses both
+/// the numeric ID and semantic name of the size (e.g., .p-0, .p-5xs, .p-none).
+///
+/// @param {string} $property - The CSS property to be applied (e.g., 'padding', 'margin', 'gap')
+/// @param {boolean} $use-prefix [false] - Defines whether CSS variables should include a specific prefix
+/// @param {string} $prefix [''] - The prefix to be used in CSS variables when $use-prefix is true
+/// @param {number} $start [0] - Starting index of the size range to be generated
+/// @param {number} $end [16] - Ending index of the size range to be generated
+///
+/// @require {function} f.get-size-by-id - Function that returns size name or ID based on index
+///
+/// @example scss - @include class-size-range('border-radius', true, 'radius', 4, 10);
+///
+/// @output Generates utility classes in the format: .base-{id}, .base-{name} [, .base-none]
+///
+/// @throws Warning if $prefix is empty when $use-prefix is true
+///
+@mixin class-size-range(
+	$property,
+	$use-prefix: false,
+	$prefix: '',
+	$start: 0,
+	$end: 16
+) {
+	// Validation: checks if prefix was provided when needed
+	@if $use-prefix and $prefix == '' {
+		@warn "Empty prefix detected. Consider providing a value for $prefix when $use-prefix is true.";
+	}
+
+	@for $i from $start through $end {
+		// Gets the semantic name and numeric ID of the size through helper functions
+		$size-name: f.get-size-by-id($i, 'name');
+		$size-id: f.get-size-by-id($i, 'id');
+
+		// Builds the CSS variable based on prefix configuration
+		$css-var: if(
+			$use-prefix,
+			--#{$prefix}-#{$size-name},
+			--#{$size-name}
+		);
+
+		// Builds the selector list (ID and semantic name)
+		$selectors: '&-#{$size-id}, &-#{$size-name}';
+
+		// For the first item (index 0), also adds the '-none' class
+		@if ($i == 0) {
+			$selectors: '#{$selectors}, &-none';
+		}
+
+		// Generates the CSS classes with the specified property
+		#{$selectors} {
+			#{$property}: var(#{$css-var});
+		}
+	}
+}
+
+/// ---- ---- Responsive ---- ----
+
+/// Mixin for creating media queries for screens smaller than the specified breakpoint
+///
+/// @require {function} f.get-breakpoint - Function to get the breakpoint value
+///
+/// @param {string} breakpoint - Name of the breakpoint to be used
+///
+/// @example scss - @include media-down('md') { ... }
+///
+/// @output Media query for screens smaller than the specified breakpoint
+@mixin media-down($breakpoint) {
+	@media (max-width: f.get-breakpoint($breakpoint)) {
+		@content;
+	}
+}
+
+/// Shortcut mixin for mobile devices (smaller than 'lg' breakpoint)
+///
+/// @require {mixin} media-down - Mixin for media queries
+///
+/// @example scss - @include media-mobile { ... }
+///
+/// @output Media query for mobile devices
+@mixin media-mobile {
+	@include media-down('lg') {
+		@content;
+	}
+}
+
+/// Mixin for creating responsive classes with optional prefixes
+///
+/// @require {variable} prefix.$prefix - Global prefix variable
+///
+/// @param {boolean} $prefix-check - Flag to check if prefix should be used
+/// @param {string} $breakpoint - Breakpoint name for the responsive class
+/// @param {string} $class - Name of the class to be generated
+///
+/// @example scss - @include responsive-class(true, 'md', 'text-center') { ... }
+///
+/// @output Responsive CSS class with optional prefix
+@mixin responsive-class(
+	$prefix-check,
+	$breakpoint,
+	$class
+) {
+	@if $prefix-check == true and prefix.$prefix != '' {
+		@if $breakpoint == '2xl' {
+			.\32xl\:#{prefix.$prefix}-#{$class} {
+				@content;
+			}
+		} @else {
+			.#{$breakpoint}\:#{prefix.$prefix}-#{$class} {
+				@content;
+			}
+		}
+	} @else {
+		@if $breakpoint == '2xl' {
+			.\32xl\:#{$class} {
+				@content;
+			}
+		} @else {
+			.#{$breakpoint}\:#{$class} {
+				@content;
+			}
+		}
+	}
+}
+
+/// ---- ---- Utils ---- ----
+
+/// Mixin for generating classes related to display flex with different alignments
+///
+/// @example scss - @include display-flex();
+///
+/// @output CSS classes for display flex with alignment variations
+@mixin display-flex {
+	&-flex {
+		display: flex;
+
+		&-start {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		&-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&-end {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+	}
+
+	&-inline-flex {
+		display: inline-flex;
+
+		&-center {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+/// Mixin for generating classes related to display grid
+///
+/// @example scss - @include display-grid();
+///
+/// @output CSS classes for display grid and inline-grid
+@mixin display-grid {
+	&-grid {
+		display: grid;
+	}
+
+	&-inline-grid {
+		display: inline-grid;
+	}
+}

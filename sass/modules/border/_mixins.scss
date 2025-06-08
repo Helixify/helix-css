@@ -1,0 +1,42 @@
+@use 'variables' as v;
+@use '../../abstracts/mixins' as mixin;
+
+@mixin radius {
+	@include mixin.class-size-range(
+		'border-radius',
+		true,
+		radius
+	);
+}
+
+@mixin style {
+	@include mixin.property-name(
+		style,
+		border-style,
+		none,
+		hidden,
+		dotted,
+		dashed,
+		solid,
+		double,
+		groove,
+		ridge,
+		inset,
+		outset
+	);
+}
+
+//#region Responsive
+// Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(
+		false,
+		$breakpoint,
+		'border'
+	) {
+		@include radius;
+		@include style;
+	}
+}
+//#endregion

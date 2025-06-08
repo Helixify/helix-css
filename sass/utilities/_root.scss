@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as mixins;
+@use '../modules/border/variables' as border;
+@use '../modules/form/variables' as form;
+@use '../modules/gap/variables' as gap;
+@use '../modules/layout/variables' as layout;
+@use '../modules/transition/variables' as transition;
+@use '../modules/typography/variables' as typography;
+
+:root {
+	@include mixins.var-size-generator;
+	@include border.variables;
+	@include form.variables;
+	@include gap.variables;
+	@include layout.variables;
+	@include transition.variables;
+	@include typography.variables;
+}

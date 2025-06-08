@@ -1,0 +1,83 @@
+@use '../../abstracts' as abstract;
+
+@mixin position {
+	@include abstract.property(
+		position,
+		static,
+		relative,
+		absolute,
+		fixed,
+		sticky
+	);
+}
+
+@mixin direction($property) {
+	&-0 {
+		#{$property}: 0;
+	}
+	&-50 {
+		#{$property}: 50%;
+	}
+	&-100 {
+		#{$property}: 100%;
+	}
+}
+
+@mixin inset {
+	&-auto {
+		inset: auto;
+	}
+	&-0 {
+		inset: 0;
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'ps'
+	) {
+		@include position;
+	}
+
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'top'
+	) {
+		@include direction(top);
+	}
+
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'bottom'
+	) {
+		@include direction(bottom);
+	}
+
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'left'
+	) {
+		@include direction(left);
+	}
+
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'right'
+	) {
+		@include direction(right);
+	}
+
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'inset'
+	) {
+		@include inset;
+	}
+}

@@ -1,0 +1,4 @@
+node_modules
+dist/**/*.map
+bun.lockb
+package-lock.json

@@ -1,0 +1,10 @@
+@use '../../abstracts/variables' as variables;
+@use '../../abstracts/mixins' as mixins;
+
+@mixin variables {
+	@include mixins.var-size-range(true, 'gap');
+}
+
+@mixin variables-module {
+	@include mixins.var-size-range(false, 'gap');
+}

@@ -1,0 +1,10 @@
+@mixin variables {
+	// Geral
+	--form-highlight: hsl(220, 90%, 60%);
+	--form-highlight-active: hsla(220, 90%, 60%, 0.32);
+	--form-link-active: hsl(220, 90%, 40%);
+
+	--form-border-color: hsl(0, 0%, 40%);
+	--form-border-width: 1px;
+	--form-outline-width: 2px;
+}

@@ -1,0 +1,15 @@
+@use '../../abstracts/mixins' as mixin;
+
+@mixin gap {
+	@include mixin.class-size-range('gap', true, gap);
+}
+
+@mixin responsive($breakpoint) {
+	@include mixin.responsive-class(
+		false,
+		$breakpoint,
+		'gap'
+	) {
+		@include gap;
+	}
+}

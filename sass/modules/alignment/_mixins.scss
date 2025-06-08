@@ -1,0 +1,58 @@
+@use '../../abstracts' as abstract;
+
+@mixin flex-alignment($property) {
+	&-start {
+		#{$property}: flex-start;
+	}
+	&-center {
+		#{$property}: center;
+	}
+	&-end {
+		#{$property}: flex-end;
+	}
+}
+
+@mixin justify-variants {
+	&-between {
+		justify-content: space-between;
+	}
+	&-around {
+		justify-content: space-around;
+	}
+	&-evenly {
+		justify-content: space-evenly;
+	}
+}
+
+@mixin align-variants {
+	&-stretch {
+		align-items: stretch;
+	}
+	&-baseline {
+		align-items: baseline;
+	}
+}
+
+//#region Responsive
+// Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
+
+@mixin responsive($breakpoint) {
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'justify'
+	) {
+		@include flex-alignment(justify-content);
+		@include justify-variants;
+	}
+
+	@include abstract.responsive-class(
+		false,
+		$breakpoint,
+		'align'
+	) {
+		@include flex-alignment(align-items);
+		@include align-variants;
+	}
+}
+//#endregion

@@ -1,0 +1,9 @@
+@use 'mixins' as m;
+
+.p {
+	@include m.spacing('padding');
+}
+
+.m {
+	@include m.spacing('margin');
+}

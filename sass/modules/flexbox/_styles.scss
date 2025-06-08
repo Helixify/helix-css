@@ -1,0 +1,9 @@
+@use 'mixins' as m;
+
+.flow {
+	@include m.flex-flow;
+}
+
+.flex-bgs {
+	@include m.flex-bgs;
+}

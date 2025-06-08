@@ -1,0 +1,9 @@
+node_modules
+dist/module/*
+public/*
+bun.lockb
+package-lock.json
+!pnpm-lock.yaml
+!sass/*
+!index.js
+!vite.config.js

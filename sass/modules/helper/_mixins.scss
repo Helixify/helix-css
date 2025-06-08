@@ -1,0 +1,229 @@
+@use '../../abstracts/mixins' as mixins;
+
+@mixin all {
+	@include mixins.property(
+		all,
+		initial,
+		inherit,
+		unset,
+		revert
+	);
+}
+
+@mixin aspect-ratio {
+	&-auto {
+		aspect-ratio: auto;
+	}
+	&-square {
+		aspect-ratio: 1 / 1;
+	}
+	&-video {
+		aspect-ratio: 16 / 9;
+	}
+}
+
+@mixin cursor {
+	@include mixins.property(
+		cursor,
+		default,
+		none,
+		pointer,
+		progress,
+		wait,
+		text,
+		no-drop,
+		not-allowed
+	);
+}
+
+@mixin display {
+	@include mixins.property(
+		display,
+		block,
+		inline,
+		inline-block,
+		none
+	);
+	@include mixins.display-flex;
+	@include mixins.display-grid;
+}
+
+@mixin list-style {
+	@include mixins.property(
+		list-style,
+		none,
+		inside,
+		outside
+	);
+}
+
+@mixin object-fit {
+	@include mixins.property(
+		object-fit,
+		contain,
+		cover,
+		fill,
+		none,
+		scale-down
+	);
+}
+
+@mixin overflow {
+	@include mixins.property(overflow, hidden, auto, scroll);
+}
+
+@mixin width {
+	&-100,
+	&-fill {
+		width: 100%;
+	}
+
+	&-50 {
+		width: 50%;
+	}
+
+	&-fit {
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+}
+
+@mixin height {
+	&-100,
+	&-fill {
+		height: 100%;
+	}
+
+	&-50 {
+		height: 50%;
+	}
+
+	&-auto {
+		height: auto;
+	}
+}
+
+@mixin visibility {
+	&-hidden {
+		visibility: hidden;
+	}
+	&-visible {
+		visibility: visible;
+	}
+}
+
+@mixin white-space {
+	@include mixins.property(
+		white-space,
+		normal,
+		nowrap,
+		pre,
+		pre-wrap,
+		pre-line,
+		break-spaces
+	);
+}
+
+@mixin z-index {
+	&-auto {
+		z-index: auto;
+	}
+	@for $i from -1 through 8 {
+		@if $i == -1 {
+			&-negative {
+				z-index: $i;
+			}
+		} @else {
+			&-#{$i} {
+				z-index: $i;
+			}
+		}
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'all'
+	) {
+		@include all;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'aspect-ratio'
+	) {
+		@include aspect-ratio;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'cursor'
+	) {
+		@include cursor;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'ds'
+	) {
+		@include display;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'list-style'
+	) {
+		@include list-style;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'object-fit'
+	) {
+		@include object-fit;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'overflow'
+	) {
+		@include overflow;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'width'
+	) {
+		@include width;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'height'
+	) {
+		@include height;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'visibility'
+	) {
+		@include visibility;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'white-space'
+	) {
+		@include white-space;
+	}
+	@include mixins.responsive-class(
+		false,
+		$breakpoint,
+		'z-index'
+	) {
+		@include z-index;
+	}
+}

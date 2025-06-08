@@ -1,0 +1,7 @@
+@use 'mixins' as m;
+
+.grid {
+	@include m.flow;
+	@include m.template-column;
+	@include m.template-row;
+}
