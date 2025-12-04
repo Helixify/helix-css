@@ -3,7 +3,7 @@
 	"private": false,
 	"type": "module",
 	"main": "index.js",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A developer-friendly CSS framework for modern web development",
 	"author": "André Luiz",
 	"homepage": "https://www.helixify.dev/helix-css",
