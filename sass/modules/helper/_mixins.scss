@@ -1,7 +1,7 @@
-@use '../../abstracts/mixins' as mixins;
+@use '../../abstracts/mixins' as mixin;
 
 @mixin all {
-	@include mixins.property(
+	@include mixin.property(
 		all,
 		initial,
 		inherit,
@@ -23,7 +23,7 @@
 }
 
 @mixin cursor {
-	@include mixins.property(
+	@include mixin.property(
 		cursor,
 		default,
 		none,
@@ -37,19 +37,19 @@
 }
 
 @mixin display {
-	@include mixins.property(
+	@include mixin.property(
 		display,
 		block,
 		inline,
 		inline-block,
 		none
 	);
-	@include mixins.display-flex;
-	@include mixins.display-grid;
+	@include mixin.display-flex;
+	@include mixin.display-grid;
 }
 
 @mixin list-style {
-	@include mixins.property(
+	@include mixin.property(
 		list-style,
 		none,
 		inside,
@@ -58,7 +58,7 @@
 }
 
 @mixin object-fit {
-	@include mixins.property(
+	@include mixin.property(
 		object-fit,
 		contain,
 		cover,
@@ -69,7 +69,7 @@
 }
 
 @mixin overflow {
-	@include mixins.property(overflow, hidden, auto, scroll);
+	@include mixin.property(overflow, hidden, auto, scroll);
 }
 
 @mixin width {
@@ -113,7 +113,7 @@
 }
 
 @mixin white-space {
-	@include mixins.property(
+	@include mixin.property(
 		white-space,
 		normal,
 		nowrap,
@@ -142,84 +142,84 @@
 }
 
 @mixin responsive($breakpoint) {
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'all'
 	) {
 		@include all;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'aspect-ratio'
 	) {
 		@include aspect-ratio;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'cursor'
 	) {
 		@include cursor;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'ds'
 	) {
 		@include display;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'list-style'
 	) {
 		@include list-style;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'object-fit'
 	) {
 		@include object-fit;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'overflow'
 	) {
 		@include overflow;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'width'
 	) {
 		@include width;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'height'
 	) {
 		@include height;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'visibility'
 	) {
 		@include visibility;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'white-space'
 	) {
 		@include white-space;
 	}
-	@include mixins.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'z-index'

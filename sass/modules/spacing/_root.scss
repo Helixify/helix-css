@@ -1,5 +1,5 @@
-@use '../../abstracts/mixins' as mixins;
+@use '../../abstracts/mixins' as mixin;
 
 :root {
-	@include mixins.var-size-generator;
+	@include mixin.var-size-generator;
 }
