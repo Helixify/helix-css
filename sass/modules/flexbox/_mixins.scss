@@ -1,4 +1,4 @@
-@use '../../abstracts' as abstract;
+@use '../../abstracts/mixins' as mixin;
 
 @mixin flex-flow {
 	&-row-wr {
@@ -41,7 +41,7 @@
 }
 
 @mixin responsive($breakpoint) {
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'flow'
@@ -49,7 +49,7 @@
 		@include flex-flow;
 	}
 
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'flex-bgs'

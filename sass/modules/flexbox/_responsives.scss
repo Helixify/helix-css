@@ -1,18 +1,19 @@
 @use 'sass:map';
-@use '../../abstracts' as abstract;
+@use '../../abstracts/mixins' as mixin;
+@use '../../abstracts/variables' as variable;
 @use 'mixins' as m;
 
 //#region Responsive
 // Gera todos os media query com os prefixos responsivos
 
-@each $breakpoint in map.keys(abstract.$breakpoints) {
-	@include abstract.media-down($breakpoint) {
-		@include abstract.responsive-class(
+@each $breakpoint in map.keys(variable.$breakpoints) {
+	@include mixin.media-down($breakpoint) {
+		@include mixin.responsive-class(
 			false,
 			$breakpoint,
 			'ds'
 		) {
-			@include abstract.display-flex;
+			@include mixin.display-flex;
 		}
 
 		@include m.responsive($breakpoint);

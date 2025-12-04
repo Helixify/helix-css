@@ -1,4 +1,3 @@
-@use '../../abstracts' as abstract;
 @use '../../abstracts/mixins' as mixin;
 
 @mixin base {
@@ -105,7 +104,7 @@
 }
 
 @mixin font-style {
-	@include abstract.property-name(
+	@include mixin.property-name(
 		style,
 		font-style,
 		normal,
@@ -115,7 +114,7 @@
 }
 
 @mixin text-decoration {
-	@include abstract.property-name(
+	@include mixin.property-name(
 		decoration,
 		text-decoration,
 		none,
@@ -136,7 +135,7 @@
 
 // Mixin text align
 @mixin text-align {
-	@include abstract.property-name(
+	@include mixin.property-name(
 		align,
 		text-align,
 		left,
@@ -146,7 +145,7 @@
 }
 
 @mixin text-transform {
-	@include abstract.property-name(
+	@include mixin.property-name(
 		transform,
 		text-transform,
 		none,
@@ -160,14 +159,10 @@
 // Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
 
 @mixin responsive($breakpoint) {
-	@include abstract.responsive-class(
-		false,
-		$breakpoint,
-		'h'
-	) {
+	@include mixin.responsive-class(false, $breakpoint, 'h') {
 		@include heading-responsive;
 	}
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'font'
@@ -176,7 +171,7 @@
 		@include font-style;
 		@include font-weight;
 	}
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'text'
@@ -185,7 +180,7 @@
 		@include text-decoration;
 		@include text-transform;
 	}
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'line-height'

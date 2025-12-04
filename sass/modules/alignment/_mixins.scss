@@ -1,4 +1,4 @@
-@use '../../abstracts' as abstract;
+@use '../../abstracts/mixins' as mixin;
 
 @mixin flex-alignment($property) {
 	&-start {
@@ -37,7 +37,7 @@
 // Mixin responsável por agrupar todos os mixins acima mas com o prefixo de responsivo
 
 @mixin responsive($breakpoint) {
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'justify'
@@ -46,7 +46,7 @@
 		@include justify-variants;
 	}
 
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'align'

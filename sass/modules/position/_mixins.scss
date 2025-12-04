@@ -1,7 +1,7 @@
-@use '../../abstracts' as abstract;
+@use '../../abstracts/mixins' as mixin;
 
 @mixin position {
-	@include abstract.property(
+	@include mixin.property(
 		position,
 		static,
 		relative,
@@ -33,7 +33,7 @@
 }
 
 @mixin responsive($breakpoint) {
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'ps'
@@ -41,7 +41,7 @@
 		@include position;
 	}
 
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'top'
@@ -49,7 +49,7 @@
 		@include direction(top);
 	}
 
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'bottom'
@@ -57,7 +57,7 @@
 		@include direction(bottom);
 	}
 
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'left'
@@ -65,7 +65,7 @@
 		@include direction(left);
 	}
 
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'right'
@@ -73,7 +73,7 @@
 		@include direction(right);
 	}
 
-	@include abstract.responsive-class(
+	@include mixin.responsive-class(
 		false,
 		$breakpoint,
 		'inset'
