@@ -49,12 +49,12 @@ Or you can embed the CDN code in your file:
 <!-- Compressed -->
 <link
 	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/gh/Helixify/Helix CSS@latest/dist/main.min.css" />
+	href="https://cdn.jsdelivr.net/gh/Helixify/helix-css@latest/dist/main.min.css" />
 
 <!-- Expanded -->
 <link
 	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/gh/Helixify/Helix CSS@latest/dist/main.css" />
+	href="https://cdn.jsdelivr.net/gh/Helixify/helix-css@latest/dist/main.css" />
 ```
 
 <br/>
@@ -63,10 +63,10 @@ Or you can embed the CDN code in your file:
 
 ```css
 /* Compressed */
-@import url('https://cdn.jsdelivr.net/gh/Helixify/Helix CSS@latest/dist/main.min.css');
+@import url('https://cdn.jsdelivr.net/gh/Helixify/helix-css@latest/dist/main.min.css');
 
 /* Expanded */
-@import url('https://cdn.jsdelivr.net/gh/Helixify/Helix CSS@latest/dist/main.css');
+@import url('https://cdn.jsdelivr.net/gh/Helixify/helix-css@latest/dist/main.css');
 ```
 
 <br/>
@@ -77,10 +77,10 @@ You can also install the separate modules in your project
 
 ```bash
 // Compressed
-https://cdn.jsdelivr.net/gh/Helixify/Helix CSS@latest/dist/module/layout.css
+https://cdn.jsdelivr.net/gh/Helixify/helix-css@latest/dist/module/layout.css
 
 // Expanded
-https://cdn.jsdelivr.net/gh/Helixify/Helix CSS@latest/dist/module/layout.min.css
+https://cdn.jsdelivr.net/gh/Helixify/helix-css@latest/dist/module/layout.min.css
 ```
 
 <br/>
@@ -97,7 +97,7 @@ Here’s a basic example of using Helix CSS:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Helix CSS Example</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Helixify/Helix CSS@latest/dist/main.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Helixify/helix-css@latest/dist/main.min.css" />
 </head>
 <body>
   <section class="p-block-16">
