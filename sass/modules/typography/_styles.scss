@@ -32,7 +32,7 @@
 	@include mixins.heading;
 }
 
-.font {
+.font-size {
 	@include mixins.font-size;
 	@include mixins.font-style;
 	@include mixins.font-weight;

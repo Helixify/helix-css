@@ -1,4 +1,5 @@
 @use '../../abstracts' as abstract;
+@use '../../abstracts/mixins' as mixin;
 
 @mixin base {
 	body {
@@ -42,25 +43,11 @@
 }
 
 @mixin font-size {
-	&-size-xs {
-		font-size: var(--font-size-xs);
-	}
-
-	&-size-sm {
-		font-size: var(--font-size-sm);
-	}
-
-	&-size-md {
-		font-size: var(--font-size-md);
-	}
-
-	&-size-lg {
-		font-size: var(--font-size-lg);
-	}
-
-	&-size-xl {
-		font-size: var(--font-size-xl);
-	}
+	@include mixin.class-size-range(
+		'font-size',
+		true,
+		font-size
+	);
 }
 
 @mixin font-weight {

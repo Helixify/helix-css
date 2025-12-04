@@ -1,3 +1,5 @@
+@use '../../abstracts/mixins' as mixin;
+
 @mixin variables {
 	--font-family:
 		ui-sans-serif, -apple-system, BlinkMacSystemFont,
@@ -18,14 +20,10 @@
 	--heading-5: 1em;
 	--heading-6: 0.75em;
 
+	@include mixin.var-size-range(true, 'font-size');
+
 	--heading-line-height: 100%;
 	--font-line-height: 1.4;
-
-	--font-size-xs: 0.75em;
-	--font-size-sm: 0.875em;
-	--font-size-md: 1em;
-	--font-size-lg: 1.25em;
-	--font-size-xl: 1.5em;
 
 	--small-size: 0.75rem;
 
