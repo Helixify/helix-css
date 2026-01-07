@@ -394,7 +394,7 @@ h6,
 .font-weight-100, .font-weight-thin {
   font-weight: 100;
 }
-.font-weight-200, .font-weight-extra-light {
+.font-weight-200, .font-weight-extralight {
   font-weight: 200;
 }
 .font-weight-300, .font-weight-light {
@@ -406,13 +406,13 @@ h6,
 .font-weight-500, .font-weight-medium {
   font-weight: 500;
 }
-.font-weight-600, .font-weight-semi-bold {
+.font-weight-600, .font-weight-semibold {
   font-weight: 600;
 }
 .font-weight-700, .font-weight-bold {
   font-weight: 700;
 }
-.font-weight-800, .font-weight-extra-bold {
+.font-weight-800, .font-weight-extrabold {
   font-weight: 800;
 }
 .font-weight-900, .font-weight-black {
@@ -3160,7 +3160,7 @@ input[type=radio]:checked::after {
   .\32 xl\:font-weight-100, .\32 xl\:font-weight-thin {
     font-weight: 100;
   }
-  .\32 xl\:font-weight-200, .\32 xl\:font-weight-extra-light {
+  .\32 xl\:font-weight-200, .\32 xl\:font-weight-extralight {
     font-weight: 200;
   }
   .\32 xl\:font-weight-300, .\32 xl\:font-weight-light {
@@ -3172,13 +3172,13 @@ input[type=radio]:checked::after {
   .\32 xl\:font-weight-500, .\32 xl\:font-weight-medium {
     font-weight: 500;
   }
-  .\32 xl\:font-weight-600, .\32 xl\:font-weight-semi-bold {
+  .\32 xl\:font-weight-600, .\32 xl\:font-weight-semibold {
     font-weight: 600;
   }
   .\32 xl\:font-weight-700, .\32 xl\:font-weight-bold {
     font-weight: 700;
   }
-  .\32 xl\:font-weight-800, .\32 xl\:font-weight-extra-bold {
+  .\32 xl\:font-weight-800, .\32 xl\:font-weight-extrabold {
     font-weight: 800;
   }
   .\32 xl\:font-weight-900, .\32 xl\:font-weight-black {
@@ -4517,7 +4517,7 @@ input[type=radio]:checked::after {
   .xl\:font-weight-100, .xl\:font-weight-thin {
     font-weight: 100;
   }
-  .xl\:font-weight-200, .xl\:font-weight-extra-light {
+  .xl\:font-weight-200, .xl\:font-weight-extralight {
     font-weight: 200;
   }
   .xl\:font-weight-300, .xl\:font-weight-light {
@@ -4529,13 +4529,13 @@ input[type=radio]:checked::after {
   .xl\:font-weight-500, .xl\:font-weight-medium {
     font-weight: 500;
   }
-  .xl\:font-weight-600, .xl\:font-weight-semi-bold {
+  .xl\:font-weight-600, .xl\:font-weight-semibold {
     font-weight: 600;
   }
   .xl\:font-weight-700, .xl\:font-weight-bold {
     font-weight: 700;
   }
-  .xl\:font-weight-800, .xl\:font-weight-extra-bold {
+  .xl\:font-weight-800, .xl\:font-weight-extrabold {
     font-weight: 800;
   }
   .xl\:font-weight-900, .xl\:font-weight-black {
@@ -5874,7 +5874,7 @@ input[type=radio]:checked::after {
   .lg\:font-weight-100, .lg\:font-weight-thin {
     font-weight: 100;
   }
-  .lg\:font-weight-200, .lg\:font-weight-extra-light {
+  .lg\:font-weight-200, .lg\:font-weight-extralight {
     font-weight: 200;
   }
   .lg\:font-weight-300, .lg\:font-weight-light {
@@ -5886,13 +5886,13 @@ input[type=radio]:checked::after {
   .lg\:font-weight-500, .lg\:font-weight-medium {
     font-weight: 500;
   }
-  .lg\:font-weight-600, .lg\:font-weight-semi-bold {
+  .lg\:font-weight-600, .lg\:font-weight-semibold {
     font-weight: 600;
   }
   .lg\:font-weight-700, .lg\:font-weight-bold {
     font-weight: 700;
   }
-  .lg\:font-weight-800, .lg\:font-weight-extra-bold {
+  .lg\:font-weight-800, .lg\:font-weight-extrabold {
     font-weight: 800;
   }
   .lg\:font-weight-900, .lg\:font-weight-black {
@@ -7231,7 +7231,7 @@ input[type=radio]:checked::after {
   .md\:font-weight-100, .md\:font-weight-thin {
     font-weight: 100;
   }
-  .md\:font-weight-200, .md\:font-weight-extra-light {
+  .md\:font-weight-200, .md\:font-weight-extralight {
     font-weight: 200;
   }
   .md\:font-weight-300, .md\:font-weight-light {
@@ -7243,13 +7243,13 @@ input[type=radio]:checked::after {
   .md\:font-weight-500, .md\:font-weight-medium {
     font-weight: 500;
   }
-  .md\:font-weight-600, .md\:font-weight-semi-bold {
+  .md\:font-weight-600, .md\:font-weight-semibold {
     font-weight: 600;
   }
   .md\:font-weight-700, .md\:font-weight-bold {
     font-weight: 700;
   }
-  .md\:font-weight-800, .md\:font-weight-extra-bold {
+  .md\:font-weight-800, .md\:font-weight-extrabold {
     font-weight: 800;
   }
   .md\:font-weight-900, .md\:font-weight-black {
@@ -8588,7 +8588,7 @@ input[type=radio]:checked::after {
   .sm\:font-weight-100, .sm\:font-weight-thin {
     font-weight: 100;
   }
-  .sm\:font-weight-200, .sm\:font-weight-extra-light {
+  .sm\:font-weight-200, .sm\:font-weight-extralight {
     font-weight: 200;
   }
   .sm\:font-weight-300, .sm\:font-weight-light {
@@ -8600,13 +8600,13 @@ input[type=radio]:checked::after {
   .sm\:font-weight-500, .sm\:font-weight-medium {
     font-weight: 500;
   }
-  .sm\:font-weight-600, .sm\:font-weight-semi-bold {
+  .sm\:font-weight-600, .sm\:font-weight-semibold {
     font-weight: 600;
   }
   .sm\:font-weight-700, .sm\:font-weight-bold {
     font-weight: 700;
   }
-  .sm\:font-weight-800, .sm\:font-weight-extra-bold {
+  .sm\:font-weight-800, .sm\:font-weight-extrabold {
     font-weight: 800;
   }
   .sm\:font-weight-900, .sm\:font-weight-black {
