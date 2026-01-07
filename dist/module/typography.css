@@ -173,43 +173,43 @@ h6,
 .font-size-16, .font-size-9xl {
   font-size: var(--font-size-9xl);
 }
-.font-size-style-normal {
+.font-style-normal {
   font-style: normal;
 }
-.font-size-style-italic {
+.font-style-italic {
   font-style: italic;
 }
-.font-size-style-oblique {
+.font-style-oblique {
   font-style: oblique;
 }
-.font-size-weight-100, .font-size-weight-thin {
+.font-weight-100, .font-weight-thin {
   font-weight: 100;
 }
-.font-size-weight-200, .font-size-weight-extra-light {
+.font-weight-200, .font-weight-extra-light {
   font-weight: 200;
 }
-.font-size-weight-300, .font-size-weight-light {
+.font-weight-300, .font-weight-light {
   font-weight: 300;
 }
-.font-size-weight-400, .font-size-weight-regular {
+.font-weight-400, .font-weight-regular {
   font-weight: 400;
 }
-.font-size-weight-500, .font-size-weight-medium {
+.font-weight-500, .font-weight-medium {
   font-weight: 500;
 }
-.font-size-weight-600, .font-size-weight-semi-bold {
+.font-weight-600, .font-weight-semi-bold {
   font-weight: 600;
 }
-.font-size-weight-700, .font-size-weight-bold {
+.font-weight-700, .font-weight-bold {
   font-weight: 700;
 }
-.font-size-weight-800, .font-size-weight-extra-bold {
+.font-weight-800, .font-weight-extra-bold {
   font-weight: 800;
 }
-.font-size-weight-900, .font-size-weight-black {
+.font-weight-900, .font-weight-black {
   font-weight: 900;
 }
-.font-size-weight-1000, .font-size-weight-weight {
+.font-weight-1000, .font-weight-weight {
   font-weight: 1000;
 }
 
@@ -273,55 +273,55 @@ h6,
   .\32 xl\:h6, .\32 xl\:heading-6 {
     font-size: var(--heading-6);
   }
-  .\32 xl\:font-0, .\32 xl\:font-5xs, .\32 xl\:font-none {
+  .\32 xl\:font-size-0, .\32 xl\:font-size-5xs, .\32 xl\:font-size-none {
     font-size: var(--font-size-5xs);
   }
-  .\32 xl\:font-1, .\32 xl\:font-4xs {
+  .\32 xl\:font-size-1, .\32 xl\:font-size-4xs {
     font-size: var(--font-size-4xs);
   }
-  .\32 xl\:font-2, .\32 xl\:font-3xs {
+  .\32 xl\:font-size-2, .\32 xl\:font-size-3xs {
     font-size: var(--font-size-3xs);
   }
-  .\32 xl\:font-3, .\32 xl\:font-2xs {
+  .\32 xl\:font-size-3, .\32 xl\:font-size-2xs {
     font-size: var(--font-size-2xs);
   }
-  .\32 xl\:font-4, .\32 xl\:font-xs {
+  .\32 xl\:font-size-4, .\32 xl\:font-size-xs {
     font-size: var(--font-size-xs);
   }
-  .\32 xl\:font-5, .\32 xl\:font-sm {
+  .\32 xl\:font-size-5, .\32 xl\:font-size-sm {
     font-size: var(--font-size-sm);
   }
-  .\32 xl\:font-6, .\32 xl\:font-md {
+  .\32 xl\:font-size-6, .\32 xl\:font-size-md {
     font-size: var(--font-size-md);
   }
-  .\32 xl\:font-7, .\32 xl\:font-lg {
+  .\32 xl\:font-size-7, .\32 xl\:font-size-lg {
     font-size: var(--font-size-lg);
   }
-  .\32 xl\:font-8, .\32 xl\:font-xl {
+  .\32 xl\:font-size-8, .\32 xl\:font-size-xl {
     font-size: var(--font-size-xl);
   }
-  .\32 xl\:font-9, .\32 xl\:font-2xl {
+  .\32 xl\:font-size-9, .\32 xl\:font-size-2xl {
     font-size: var(--font-size-2xl);
   }
-  .\32 xl\:font-10, .\32 xl\:font-3xl {
+  .\32 xl\:font-size-10, .\32 xl\:font-size-3xl {
     font-size: var(--font-size-3xl);
   }
-  .\32 xl\:font-11, .\32 xl\:font-4xl {
+  .\32 xl\:font-size-11, .\32 xl\:font-size-4xl {
     font-size: var(--font-size-4xl);
   }
-  .\32 xl\:font-12, .\32 xl\:font-5xl {
+  .\32 xl\:font-size-12, .\32 xl\:font-size-5xl {
     font-size: var(--font-size-5xl);
   }
-  .\32 xl\:font-13, .\32 xl\:font-6xl {
+  .\32 xl\:font-size-13, .\32 xl\:font-size-6xl {
     font-size: var(--font-size-6xl);
   }
-  .\32 xl\:font-14, .\32 xl\:font-7xl {
+  .\32 xl\:font-size-14, .\32 xl\:font-size-7xl {
     font-size: var(--font-size-7xl);
   }
-  .\32 xl\:font-15, .\32 xl\:font-8xl {
+  .\32 xl\:font-size-15, .\32 xl\:font-size-8xl {
     font-size: var(--font-size-8xl);
   }
-  .\32 xl\:font-16, .\32 xl\:font-9xl {
+  .\32 xl\:font-size-16, .\32 xl\:font-size-9xl {
     font-size: var(--font-size-9xl);
   }
   .\32 xl\:font-style-normal {
@@ -422,55 +422,55 @@ h6,
   .xl\:h6, .xl\:heading-6 {
     font-size: var(--heading-6);
   }
-  .xl\:font-0, .xl\:font-5xs, .xl\:font-none {
+  .xl\:font-size-0, .xl\:font-size-5xs, .xl\:font-size-none {
     font-size: var(--font-size-5xs);
   }
-  .xl\:font-1, .xl\:font-4xs {
+  .xl\:font-size-1, .xl\:font-size-4xs {
     font-size: var(--font-size-4xs);
   }
-  .xl\:font-2, .xl\:font-3xs {
+  .xl\:font-size-2, .xl\:font-size-3xs {
     font-size: var(--font-size-3xs);
   }
-  .xl\:font-3, .xl\:font-2xs {
+  .xl\:font-size-3, .xl\:font-size-2xs {
     font-size: var(--font-size-2xs);
   }
-  .xl\:font-4, .xl\:font-xs {
+  .xl\:font-size-4, .xl\:font-size-xs {
     font-size: var(--font-size-xs);
   }
-  .xl\:font-5, .xl\:font-sm {
+  .xl\:font-size-5, .xl\:font-size-sm {
     font-size: var(--font-size-sm);
   }
-  .xl\:font-6, .xl\:font-md {
+  .xl\:font-size-6, .xl\:font-size-md {
     font-size: var(--font-size-md);
   }
-  .xl\:font-7, .xl\:font-lg {
+  .xl\:font-size-7, .xl\:font-size-lg {
     font-size: var(--font-size-lg);
   }
-  .xl\:font-8, .xl\:font-xl {
+  .xl\:font-size-8, .xl\:font-size-xl {
     font-size: var(--font-size-xl);
   }
-  .xl\:font-9, .xl\:font-2xl {
+  .xl\:font-size-9, .xl\:font-size-2xl {
     font-size: var(--font-size-2xl);
   }
-  .xl\:font-10, .xl\:font-3xl {
+  .xl\:font-size-10, .xl\:font-size-3xl {
     font-size: var(--font-size-3xl);
   }
-  .xl\:font-11, .xl\:font-4xl {
+  .xl\:font-size-11, .xl\:font-size-4xl {
     font-size: var(--font-size-4xl);
   }
-  .xl\:font-12, .xl\:font-5xl {
+  .xl\:font-size-12, .xl\:font-size-5xl {
     font-size: var(--font-size-5xl);
   }
-  .xl\:font-13, .xl\:font-6xl {
+  .xl\:font-size-13, .xl\:font-size-6xl {
     font-size: var(--font-size-6xl);
   }
-  .xl\:font-14, .xl\:font-7xl {
+  .xl\:font-size-14, .xl\:font-size-7xl {
     font-size: var(--font-size-7xl);
   }
-  .xl\:font-15, .xl\:font-8xl {
+  .xl\:font-size-15, .xl\:font-size-8xl {
     font-size: var(--font-size-8xl);
   }
-  .xl\:font-16, .xl\:font-9xl {
+  .xl\:font-size-16, .xl\:font-size-9xl {
     font-size: var(--font-size-9xl);
   }
   .xl\:font-style-normal {
@@ -571,55 +571,55 @@ h6,
   .lg\:h6, .lg\:heading-6 {
     font-size: var(--heading-6);
   }
-  .lg\:font-0, .lg\:font-5xs, .lg\:font-none {
+  .lg\:font-size-0, .lg\:font-size-5xs, .lg\:font-size-none {
     font-size: var(--font-size-5xs);
   }
-  .lg\:font-1, .lg\:font-4xs {
+  .lg\:font-size-1, .lg\:font-size-4xs {
     font-size: var(--font-size-4xs);
   }
-  .lg\:font-2, .lg\:font-3xs {
+  .lg\:font-size-2, .lg\:font-size-3xs {
     font-size: var(--font-size-3xs);
   }
-  .lg\:font-3, .lg\:font-2xs {
+  .lg\:font-size-3, .lg\:font-size-2xs {
     font-size: var(--font-size-2xs);
   }
-  .lg\:font-4, .lg\:font-xs {
+  .lg\:font-size-4, .lg\:font-size-xs {
     font-size: var(--font-size-xs);
   }
-  .lg\:font-5, .lg\:font-sm {
+  .lg\:font-size-5, .lg\:font-size-sm {
     font-size: var(--font-size-sm);
   }
-  .lg\:font-6, .lg\:font-md {
+  .lg\:font-size-6, .lg\:font-size-md {
     font-size: var(--font-size-md);
   }
-  .lg\:font-7, .lg\:font-lg {
+  .lg\:font-size-7, .lg\:font-size-lg {
     font-size: var(--font-size-lg);
   }
-  .lg\:font-8, .lg\:font-xl {
+  .lg\:font-size-8, .lg\:font-size-xl {
     font-size: var(--font-size-xl);
   }
-  .lg\:font-9, .lg\:font-2xl {
+  .lg\:font-size-9, .lg\:font-size-2xl {
     font-size: var(--font-size-2xl);
   }
-  .lg\:font-10, .lg\:font-3xl {
+  .lg\:font-size-10, .lg\:font-size-3xl {
     font-size: var(--font-size-3xl);
   }
-  .lg\:font-11, .lg\:font-4xl {
+  .lg\:font-size-11, .lg\:font-size-4xl {
     font-size: var(--font-size-4xl);
   }
-  .lg\:font-12, .lg\:font-5xl {
+  .lg\:font-size-12, .lg\:font-size-5xl {
     font-size: var(--font-size-5xl);
   }
-  .lg\:font-13, .lg\:font-6xl {
+  .lg\:font-size-13, .lg\:font-size-6xl {
     font-size: var(--font-size-6xl);
   }
-  .lg\:font-14, .lg\:font-7xl {
+  .lg\:font-size-14, .lg\:font-size-7xl {
     font-size: var(--font-size-7xl);
   }
-  .lg\:font-15, .lg\:font-8xl {
+  .lg\:font-size-15, .lg\:font-size-8xl {
     font-size: var(--font-size-8xl);
   }
-  .lg\:font-16, .lg\:font-9xl {
+  .lg\:font-size-16, .lg\:font-size-9xl {
     font-size: var(--font-size-9xl);
   }
   .lg\:font-style-normal {
@@ -720,55 +720,55 @@ h6,
   .md\:h6, .md\:heading-6 {
     font-size: var(--heading-6);
   }
-  .md\:font-0, .md\:font-5xs, .md\:font-none {
+  .md\:font-size-0, .md\:font-size-5xs, .md\:font-size-none {
     font-size: var(--font-size-5xs);
   }
-  .md\:font-1, .md\:font-4xs {
+  .md\:font-size-1, .md\:font-size-4xs {
     font-size: var(--font-size-4xs);
   }
-  .md\:font-2, .md\:font-3xs {
+  .md\:font-size-2, .md\:font-size-3xs {
     font-size: var(--font-size-3xs);
   }
-  .md\:font-3, .md\:font-2xs {
+  .md\:font-size-3, .md\:font-size-2xs {
     font-size: var(--font-size-2xs);
   }
-  .md\:font-4, .md\:font-xs {
+  .md\:font-size-4, .md\:font-size-xs {
     font-size: var(--font-size-xs);
   }
-  .md\:font-5, .md\:font-sm {
+  .md\:font-size-5, .md\:font-size-sm {
     font-size: var(--font-size-sm);
   }
-  .md\:font-6, .md\:font-md {
+  .md\:font-size-6, .md\:font-size-md {
     font-size: var(--font-size-md);
   }
-  .md\:font-7, .md\:font-lg {
+  .md\:font-size-7, .md\:font-size-lg {
     font-size: var(--font-size-lg);
   }
-  .md\:font-8, .md\:font-xl {
+  .md\:font-size-8, .md\:font-size-xl {
     font-size: var(--font-size-xl);
   }
-  .md\:font-9, .md\:font-2xl {
+  .md\:font-size-9, .md\:font-size-2xl {
     font-size: var(--font-size-2xl);
   }
-  .md\:font-10, .md\:font-3xl {
+  .md\:font-size-10, .md\:font-size-3xl {
     font-size: var(--font-size-3xl);
   }
-  .md\:font-11, .md\:font-4xl {
+  .md\:font-size-11, .md\:font-size-4xl {
     font-size: var(--font-size-4xl);
   }
-  .md\:font-12, .md\:font-5xl {
+  .md\:font-size-12, .md\:font-size-5xl {
     font-size: var(--font-size-5xl);
   }
-  .md\:font-13, .md\:font-6xl {
+  .md\:font-size-13, .md\:font-size-6xl {
     font-size: var(--font-size-6xl);
   }
-  .md\:font-14, .md\:font-7xl {
+  .md\:font-size-14, .md\:font-size-7xl {
     font-size: var(--font-size-7xl);
   }
-  .md\:font-15, .md\:font-8xl {
+  .md\:font-size-15, .md\:font-size-8xl {
     font-size: var(--font-size-8xl);
   }
-  .md\:font-16, .md\:font-9xl {
+  .md\:font-size-16, .md\:font-size-9xl {
     font-size: var(--font-size-9xl);
   }
   .md\:font-style-normal {
@@ -869,55 +869,55 @@ h6,
   .sm\:h6, .sm\:heading-6 {
     font-size: var(--heading-6);
   }
-  .sm\:font-0, .sm\:font-5xs, .sm\:font-none {
+  .sm\:font-size-0, .sm\:font-size-5xs, .sm\:font-size-none {
     font-size: var(--font-size-5xs);
   }
-  .sm\:font-1, .sm\:font-4xs {
+  .sm\:font-size-1, .sm\:font-size-4xs {
     font-size: var(--font-size-4xs);
   }
-  .sm\:font-2, .sm\:font-3xs {
+  .sm\:font-size-2, .sm\:font-size-3xs {
     font-size: var(--font-size-3xs);
   }
-  .sm\:font-3, .sm\:font-2xs {
+  .sm\:font-size-3, .sm\:font-size-2xs {
     font-size: var(--font-size-2xs);
   }
-  .sm\:font-4, .sm\:font-xs {
+  .sm\:font-size-4, .sm\:font-size-xs {
     font-size: var(--font-size-xs);
   }
-  .sm\:font-5, .sm\:font-sm {
+  .sm\:font-size-5, .sm\:font-size-sm {
     font-size: var(--font-size-sm);
   }
-  .sm\:font-6, .sm\:font-md {
+  .sm\:font-size-6, .sm\:font-size-md {
     font-size: var(--font-size-md);
   }
-  .sm\:font-7, .sm\:font-lg {
+  .sm\:font-size-7, .sm\:font-size-lg {
     font-size: var(--font-size-lg);
   }
-  .sm\:font-8, .sm\:font-xl {
+  .sm\:font-size-8, .sm\:font-size-xl {
     font-size: var(--font-size-xl);
   }
-  .sm\:font-9, .sm\:font-2xl {
+  .sm\:font-size-9, .sm\:font-size-2xl {
     font-size: var(--font-size-2xl);
   }
-  .sm\:font-10, .sm\:font-3xl {
+  .sm\:font-size-10, .sm\:font-size-3xl {
     font-size: var(--font-size-3xl);
   }
-  .sm\:font-11, .sm\:font-4xl {
+  .sm\:font-size-11, .sm\:font-size-4xl {
     font-size: var(--font-size-4xl);
   }
-  .sm\:font-12, .sm\:font-5xl {
+  .sm\:font-size-12, .sm\:font-size-5xl {
     font-size: var(--font-size-5xl);
   }
-  .sm\:font-13, .sm\:font-6xl {
+  .sm\:font-size-13, .sm\:font-size-6xl {
     font-size: var(--font-size-6xl);
   }
-  .sm\:font-14, .sm\:font-7xl {
+  .sm\:font-size-14, .sm\:font-size-7xl {
     font-size: var(--font-size-7xl);
   }
-  .sm\:font-15, .sm\:font-8xl {
+  .sm\:font-size-15, .sm\:font-size-8xl {
     font-size: var(--font-size-8xl);
   }
-  .sm\:font-16, .sm\:font-9xl {
+  .sm\:font-size-16, .sm\:font-size-9xl {
     font-size: var(--font-size-9xl);
   }
   .sm\:font-style-normal {

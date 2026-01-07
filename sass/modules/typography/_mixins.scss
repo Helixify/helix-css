@@ -42,11 +42,13 @@
 }
 
 @mixin font-size {
-	@include mixin.class-size-range(
-		'font-size',
-		true,
-		font-size
-	);
+	&-size {
+		@include mixin.class-size-range(
+			'font-size',
+			true,
+			font-size
+		);
+	}
 }
 
 @mixin font-weight {
