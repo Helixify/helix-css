@@ -1,11 +1,11 @@
-/*  
+/*
   Helix CSS
 */
 @use 'utilities/root' as *;
 
 @use 'modules/reset/styles' as *;
-@use 'modules/layout/styles' as *;
 @use 'modules/typography/styles' as *;
+@use 'modules/layout/styles' as *;
 @use 'modules/position/styles' as *;
 @use 'modules/flexbox/styles' as *;
 @use 'modules/grid/styles' as *;
