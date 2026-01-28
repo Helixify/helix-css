@@ -84,7 +84,7 @@ input[type=file]::file-selector-button:where(:not(:active)):hover {
 }
 
 a {
-  line-height: 100%;
+  line-height: inherit;
   color: var(--form-highlight);
 }
 a:active {

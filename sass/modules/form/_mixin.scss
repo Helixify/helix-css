@@ -52,7 +52,7 @@
 }
 
 @mixin link {
-	line-height: 100%;
+	line-height: inherit;
 	color: var(--form-highlight);
 	&:active {
 		color: var(--form-link-active);
